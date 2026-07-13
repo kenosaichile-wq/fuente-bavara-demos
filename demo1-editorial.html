@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuente Bávara — Tradición Alemana | Demo 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#14324F;
+  --azul-osc:#0D2338;
+  --crema:#F7F0E2;
+  --crema-2:#FDF8EC;
+  --ambar:#F2A93B;
+  --amarillo:#F4C531;
+  --rojo:#C8402A;
+  --texto:#22303C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--crema);color:var(--texto);overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Bricolage Grotesque',sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ===== NAV ===== */
+.nav-wrap{position:sticky;top:0;z-index:100;padding:14px 20px;background:linear-gradient(var(--crema) 60%,transparent)}
+nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;background:var(--azul);border-radius:60px;padding:10px 12px 10px 24px;box-shadow:0 10px 30px rgba(13,35,56,.25)}
+.logo{display:flex;align-items:center;gap:10px;color:var(--crema);font-family:'Bricolage Grotesque';font-weight:800;font-size:1.15rem}
+.logo .pretzel{width:38px;height:38px;border-radius:50%;background:var(--ambar);display:grid;place-items:center;font-size:1.2rem}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{color:var(--crema);font-size:.86rem;font-weight:500;padding:9px 16px;border-radius:30px;transition:.2s}
+.nav-links a:hover{background:rgba(255,255,255,.12)}
+.btn{display:inline-block;background:var(--amarillo);color:var(--azul-osc);font-weight:700;font-size:.9rem;padding:12px 24px;border-radius:30px;border:none;cursor:pointer;transition:.2s;box-shadow:0 4px 0 rgba(0,0,0,.18)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(0,0,0,.18)}
+.btn.grande{font-size:1rem;padding:16px 34px}
+.btn.blanco{background:var(--crema);}
+
+/* ===== HERO ===== */
+.hero{position:relative;max-width:1200px;margin:10px auto 0;padding:20px 20px 0;min-height:640px}
+.hero-titulo{position:relative;z-index:1}
+.hero-titulo h1{font-size:clamp(3.2rem,11vw,8.5rem);line-height:.95;font-weight:800;color:var(--azul);letter-spacing:-.02em}
+.hero-titulo h1 .linea2{display:block;position:relative;z-index:3}
+.hero-img{position:absolute;top:30px;right:4%;width:min(46%,480px);z-index:2}
+.hero-img img{border-radius:0 0 240px 240px;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px rgba(13,35,56,.28)}
+.hero-sub{max-width:340px;margin-top:36px;color:#5a6a78;font-size:.95rem;line-height:1.65}
+.hero-cta{margin-top:26px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.sticker{position:absolute;background:var(--crema-2);border:2px solid var(--azul);border-radius:18px;padding:12px 16px;box-shadow:5px 5px 0 var(--azul);z-index:4;text-align:center}
+.sticker b{display:block;font-family:'Bricolage Grotesque';color:var(--azul);font-size:1rem}
+.sticker span{font-size:.75rem;color:#5a6a78}
+.st-1{right:2%;bottom:110px;transform:rotate(4deg)}
+.st-2{right:40%;top:100px;transform:rotate(-6deg);background:var(--amarillo);border-color:var(--azul-osc)}
+.chip-flotante{position:absolute;left:46%;bottom:170px;background:var(--rojo);color:#fff;font-weight:700;font-size:.8rem;padding:10px 18px;border-radius:30px;transform:rotate(-8deg);z-index:4}
+.marquee{margin-top:60px;background:var(--azul);color:var(--crema);overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.2deg) scale(1.02)}
+.marquee-inner{display:inline-block;animation:scroll 28s linear infinite;font-family:'Bricolage Grotesque';font-weight:600;font-size:1.05rem}
+.marquee-inner span{margin:0 26px;opacity:.95}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== SECCIONES ===== */
+section{padding:80px 20px}
+.contenedor{max-width:1200px;margin:0 auto}
+.titulo-seccion{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;color:var(--azul);line-height:1.05;letter-spacing:-.01em}
+.subtitulo{color:#5a6a78;margin-top:14px;max-width:520px;line-height:1.65;font-size:.95rem}
+.etiqueta{display:inline-block;background:var(--amarillo);color:var(--azul-osc);font-weight:700;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:30px;margin-bottom:18px}
+
+/* ===== DESTACADOS ===== */
+.arco{background:var(--azul);border-radius:50% 50% 0 0/90px 90px 0 0;margin-top:40px}
+.arco .etiqueta{background:var(--rojo);color:#fff}
+.arco .titulo-seccion,.arco .subtitulo{color:var(--crema)}
+.arco .subtitulo{color:#b9c6d2}
+.destacados-head{text-align:center;display:flex;flex-direction:column;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:48px}
+.card{background:var(--crema-2);border-radius:22px;padding:14px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-8px) rotate(-.5deg)}
+.card img{border-radius:16px;aspect-ratio:4/3;object-fit:cover}
+.card .precio-tag{position:absolute;top:26px;right:26px;background:var(--amarillo);color:var(--azul-osc);font-weight:800;font-family:'Bricolage Grotesque';padding:7px 14px;border-radius:30px;font-size:.95rem;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.card h3{margin:16px 6px 6px;color:var(--azul);font-size:1.15rem;font-weight:700}
+.card p{margin:0 6px 14px;font-size:.83rem;color:#5a6a78;line-height:1.5;min-height:40px}
+.card .btn{width:calc(100% - 12px);margin:0 6px 6px;text-align:center;font-size:.85rem;padding:11px}
+
+/* ===== HISTORIA ===== */
+.historia{background:var(--crema)}
+.historia-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.historia-fotos{position:relative;min-height:420px}
+.historia-fotos img{position:absolute;border-radius:18px;object-fit:cover;box-shadow:0 20px 40px rgba(13,35,56,.2)}
+.hf-1{width:62%;aspect-ratio:4/5;left:0;top:0;transform:rotate(-3deg)}
+.hf-2{width:52%;aspect-ratio:1;right:0;bottom:0;transform:rotate(3deg);border:6px solid var(--crema-2)}
+.rombo{position:absolute;right:8%;top:-10px;width:70px;height:70px;background:conic-gradient(var(--azul) 0 25%,var(--crema-2) 0 50%,var(--azul) 0 75%,var(--crema-2) 0);border-radius:12px;transform:rotate(45deg);border:3px solid var(--azul);z-index:3}
+.check-lista{list-style:none;margin-top:24px}
+.check-lista li{display:flex;gap:12px;margin-bottom:14px;font-size:.93rem;color:#3d4d5c;align-items:flex-start;line-height:1.5}
+.check-lista .tic{flex:none;width:24px;height:24px;border-radius:50%;background:var(--ambar);color:var(--azul-osc);display:grid;place-items:center;font-size:.75rem;font-weight:800}
+
+/* ===== CARTA / MENU ===== */
+.carta{background:var(--crema-2);border-radius:60px;margin:0 14px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:40px 0 10px}
+.tab{background:transparent;border:2px solid var(--azul);color:var(--azul);font-family:'Bricolage Grotesque';font-weight:600;font-size:.88rem;padding:10px 20px;border-radius:30px;cursor:pointer;transition:.2s}
+.tab:hover{background:rgba(20,50,79,.08)}
+.tab.activa{background:var(--azul);color:var(--crema)}
+.grupos{max-width:980px;margin:30px auto 0}
+.grupo{margin-bottom:34px}
+.grupo h4{font-family:'Bricolage Grotesque';color:var(--rojo);font-size:1.05rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;display:flex;align-items:center;gap:14px}
+.grupo h4::after{content:'';flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--azul) 0 8px,transparent 8px 16px);opacity:.3}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:10px 40px}
+.item{display:flex;justify-content:space-between;gap:14px;padding:10px 4px;border-radius:10px;transition:.15s}
+.item:hover{background:rgba(242,169,59,.14)}
+.item .nom{font-weight:600;color:var(--azul);font-size:.92rem}
+.item .desc{font-size:.78rem;color:#7a8794;line-height:1.45;margin-top:3px}
+.item .precio{font-family:'Bricolage Grotesque';font-weight:700;color:var(--texto);white-space:nowrap;font-size:.95rem}
+
+/* ===== NUMEROS ===== */
+.numeros{background:var(--azul);border-radius:60px;margin:60px 14px;position:relative;overflow:hidden}
+.numeros::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(247,240,226,.04) 0 25%,transparent 0 50%);background-size:60px 60px}
+.numeros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:50px;position:relative}
+.num-card{text-align:center}
+.num-burbuja{width:130px;height:130px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.9rem;transform:rotate(-4deg)}
+.nb-1{background:var(--amarillo);color:var(--azul-osc);border-radius:50% 50% 50% 12px}
+.nb-2{background:var(--rojo);color:#fff;border-radius:12px 50% 50% 50%;transform:rotate(4deg)}
+.nb-3{background:var(--crema);color:var(--azul);border-radius:50% 12px 50% 50%}
+.nb-4{background:var(--ambar);color:var(--azul-osc);border-radius:50% 50% 12px 50%;transform:rotate(4deg)}
+.num-card p{color:#b9c6d2;font-size:.88rem;max-width:200px;margin:0 auto}
+
+/* ===== GALERIA ===== */
+.galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.galeria-grid img{border-radius:18px;aspect-ratio:1;object-fit:cover;transition:.25s}
+.galeria-grid img:hover{transform:scale(1.03) rotate(1deg)}
+.galeria-grid img:nth-child(2),.galeria-grid img:nth-child(4){margin-top:26px}
+
+/* ===== UBICACION ===== */
+.ubicacion{background:var(--crema-2);border-radius:60px;margin:0 14px 60px}
+.ubi-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+.ubi-card{background:var(--crema);border:2px solid var(--azul);border-radius:26px;padding:34px;box-shadow:8px 8px 0 var(--azul)}
+.ubi-card h3{color:var(--azul);font-size:1.4rem;margin-bottom:6px}
+.ubi-card .dir{color:var(--rojo);font-weight:600;font-size:.95rem;margin-bottom:18px}
+.ubi-card ul{list-style:none;font-size:.9rem;color:#4a5a68;line-height:2}
+.ubi-card ul b{color:var(--azul)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--azul-osc);color:var(--crema);padding:70px 20px 30px;border-radius:60px 60px 0 0}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-grid h4{font-size:1rem;margin-bottom:16px;color:var(--amarillo)}
+.footer-grid ul{list-style:none;font-size:.88rem;line-height:2.2;color:#9fb0bf}
+.footer-grid ul a:hover{color:var(--crema)}
+.footer-logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.6rem}
+.footer-desc{color:#9fb0bf;font-size:.88rem;margin-top:12px;max-width:280px;line-height:1.7}
+.redes{display:flex;gap:10px;margin-top:20px}
+.redes a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;font-size:1.1rem;transition:.2s}
+.redes a:hover{background:var(--ambar)}
+.copy{max-width:1200px;margin:50px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:.78rem;color:#7b8fa1;flex-wrap:wrap;gap:10px}
+
+/* ===== WHATSAPP ===== */
+.wsp{position:fixed;bottom:24px;right:24px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:.2s;font-size:1.7rem}
+.wsp:hover{transform:scale(1.1)}
+
+/* ===== ANIMACIONES ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero{min-height:auto}
+  .hero-img{position:relative;width:100%;right:0;top:0;margin-top:30px}
+  .hero-img img{border-radius:30px;aspect-ratio:16/10}
+  .st-2,.chip-flotante{display:none}
+  .st-1{bottom:-16px;right:16px}
+  .historia-grid,.ubi-grid,.footer-grid{grid-template-columns:1fr}
+  .items{grid-template-columns:1fr}
+  .galeria-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{gap:26px}
+}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+<nav>
+  <a href="#" class="logo"><span class="pretzel">🥨</span> Fuente Bávara</a>
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#historia">Nosotros</a></li>
+    <li><a href="#carta">La Carta</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+  </ul>
+  <a class="btn" href="#ubicacion">Reservar Mesa</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-titulo">
+    <h1>Tradición <span class="linea2">Alemana</span></h1>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=900&auto=format&fit=crop" alt="Sándwich Bávaro">
+    <div class="sticker st-1"><b>Sándwich Bávaro</b><span>El favorito de la casa · $10.500</span></div>
+  </div>
+  <div class="sticker st-2"><b>+35 años</b><span>de fuente de soda</span></div>
+  <div class="chip-flotante">¡Schop bien helado! 🍺</div>
+  <p class="hero-sub">Sándwiches XL, chorrillanas para compartir y cerveza artesanal Kunstmann &amp; Austral. La fuente de soda con alma alemana en el corazón de Valparaíso y Viña del Mar.</p>
+  <div class="hero-cta">
+    <a class="btn grande" href="#carta">Ver la Carta 🥨</a>
+    <a class="btn grande blanco" href="#ubicacion">Cómo llegar</a>
+  </div>
+</header>
+
+<div class="marquee"><div class="marquee-inner">
+  <span>🥨 CHURRASCOS</span><span>🍺 SCHOP ARTESANAL</span><span>🍟 CHORRILLANAS</span><span>🌭 COMPLETOS</span><span>🥩 MECHADAS</span><span>🍕 PIZZAS</span><span>🥨 CHURRASCOS</span><span>🍺 SCHOP ARTESANAL</span><span>🍟 CHORRILLANAS</span><span>🌭 COMPLETOS</span><span>🥩 MECHADAS</span><span>🍕 PIZZAS</span>
+</div></div>
+
+<!-- DESTACADOS -->
+<section class="arco">
+  <div class="contenedor">
+    <div class="destacados-head reveal">
+      <span class="etiqueta">Los favoritos</span>
+      <h2 class="titulo-seccion">Descubre nuestros<br>especiales</h2>
+      <p class="subtitulo">Las preparaciones que nos hicieron famosos: contundentes, caseras y con el toque alemán de siempre.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?q=80&w=700&auto=format&fit=crop" alt="Bávaro">
+        <span class="precio-tag">$10.500</span>
+        <h3>El Bávaro</h3>
+        <p>Lomito de cerdo, queso fundido, cebolla caramelizada, pepinillo y mayo casera.</p>
+        <a class="btn" href="#carta">Ver en la carta</a>
+      </div>
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=700&auto=format&fit=crop" alt="Hamburgo">
+        <span class="precio-tag">$11.500</span>
+        <h3>Hamburgo</h3>
+        <p>Hamburguesa, queso fundido, cebolla caramelizada, huevo frito, lechuga y mayo.</p>
+        <a class="btn" href="#carta">Ver en la carta</a>
+      </div>
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=700&auto=format&fit=crop" alt="Chorrillana">
+        <span class="precio-tag">$18.400</span>
+        <h3>Chorrillana Tradicional</h3>
+        <p>Para compartir como se debe: papas fritas, carne, cebolla y huevo. Un clásico porteño.</p>
+        <a class="btn" href="#carta">Ver en la carta</a>
+      </div>
+      <div class="card reveal">
+        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=700&auto=format&fit=crop" alt="Schop">
+        <span class="precio-tag">$3.900</span>
+        <h3>Schop Kunstmann</h3>
+        <p>Torobayo, Bock o sin filtrar. También Austral Calafate, Heineken y Royal bien heladas.</p>
+        <a class="btn" href="#carta">Ver en la carta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="historia" id="historia">
+  <div class="contenedor historia-grid">
+    <div class="historia-fotos reveal">
+      <div class="rombo"></div>
+      <img class="hf-1" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Interior Fuente Bávara">
+      <img class="hf-2" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=700&auto=format&fit=crop" alt="Preparación">
+    </div>
+    <div class="reveal">
+      <span class="etiqueta">Nuestra historia</span>
+      <h2 class="titulo-seccion">El sabor de siempre, la tradición de una fuente de soda alemana</h2>
+      <p class="subtitulo">De la Plaza Aníbal Pinto al corazón de Viña del Mar: preparaciones abundantes, ingredientes frescos y la receta que ha acompañado a generaciones de porteños.</p>
+      <ul class="check-lista">
+        <li><span class="tic">✓</span> Vienesas especiales Llanquihue y chucrut como manda la tradición alemana.</li>
+        <li><span class="tic">✓</span> Mayonesa y salsas 100% caseras, preparadas todos los días.</li>
+        <li><span class="tic">✓</span> Cervezas artesanales del sur: Kunstmann y Austral de barril.</li>
+        <li><span class="tic">✓</span> Desayunos, almuerzos, sándwiches XL y coctelería hasta la noche.</li>
+      </ul>
+      <br>
+      <a class="btn grande" href="#carta">Conoce la carta completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section class="carta" id="carta">
+  <div class="contenedor">
+    <div class="destacados-head reveal">
+      <span class="etiqueta">La carta</span>
+      <h2 class="titulo-seccion">Más de 200 preparaciones</h2>
+      <p class="subtitulo">Desde el desayuno hasta el bajativo. Todos los precios incluyen IVA.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="grupos" id="grupos"></div>
+  </div>
+</section>
+
+<!-- NUMEROS -->
+<section class="numeros">
+  <div class="contenedor">
+    <div class="destacados-head reveal">
+      <span class="etiqueta">Fuente Bávara en cifras</span>
+      <h2 class="titulo-seccion" style="color:var(--crema)">Los números que nos definen</h2>
+    </div>
+    <div class="numeros-grid reveal">
+      <div class="num-card"><div class="num-burbuja nb-1">+200</div><p>Preparaciones entre sándwiches, platos, pizzas y coctelería</p></div>
+      <div class="num-card"><div class="num-burbuja nb-2">2</div><p>Locales: Valparaíso y Viña del Mar</p></div>
+      <div class="num-card"><div class="num-burbuja nb-3">+35</div><p>Años de tradición como fuente de soda alemana</p></div>
+      <div class="num-card"><div class="num-burbuja nb-4">13</div><p>Variedades de cerveza, con schop artesanal de barril</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="contenedor">
+    <div class="destacados-head reveal">
+      <span class="etiqueta">Galería</span>
+      <h2 class="titulo-seccion">Un festín para la vista</h2>
+    </div>
+    <div class="galeria-grid reveal">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop" alt="Hamburguesa">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Pizza">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop" alt="Carnes">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop" alt="Coctelería">
+    </div>
+  </div>
+</section>
+
+<!-- UBICACION -->
+<section class="ubicacion" id="ubicacion">
+  <div class="contenedor">
+    <div class="destacados-head reveal">
+      <span class="etiqueta">Visítanos</span>
+      <h2 class="titulo-seccion">Te esperamos</h2>
+      <p class="subtitulo">Reserva tu mesa por WhatsApp o simplemente llega: siempre hay un schop helado esperándote.</p>
+    </div>
+    <div class="ubi-grid">
+      <div class="ubi-card reveal">
+        <h3>📍 Valparaíso</h3>
+        <p class="dir">Plaza Aníbal Pinto 339</p>
+        <ul>
+          <li><b>Lun a Jue:</b> 09:00 – 22:00 hrs</li>
+          <li><b>Vie y Sáb:</b> 09:00 – 23:30 hrs</li>
+          <li><b>Domingo:</b> 10:00 – 21:00 hrs</li>
+          <li><b>Teléfono:</b> +56 32 XXX XXXX</li>
+        </ul>
+      </div>
+      <div class="ubi-card reveal">
+        <h3>📍 Viña del Mar</h3>
+        <p class="dir">Av. Valparaíso [dirección por confirmar]</p>
+        <ul>
+          <li><b>Lun a Jue:</b> 09:00 – 22:00 hrs</li>
+          <li><b>Vie y Sáb:</b> 09:00 – 23:30 hrs</li>
+          <li><b>Domingo:</b> 10:00 – 21:00 hrs</li>
+          <li><b>Teléfono:</b> +56 32 XXX XXXX</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">🥨 Fuente Bávara</div>
+      <p class="footer-desc">Tradición alemana en la Quinta Región. Sándwiches, chorrillanas, platos caseros y la mejor cerveza artesanal del sur de Chile.</p>
+      <div class="redes">
+        <a href="https://instagram.com/fuentebavara" aria-label="Instagram">📷</a>
+        <a href="https://facebook.com/lafuentebavara" aria-label="Facebook">👍</a>
+        <a href="#" aria-label="TripAdvisor">🦉</a>
+      </div>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#historia">Nosotros</a></li>
+        <li><a href="#carta">La Carta</a></li>
+        <li><a href="#galeria">Galería</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>La Carta</h4>
+      <ul>
+        <li><a href="#carta">Sándwiches</a></li>
+        <li><a href="#carta">Platos caseros</a></li>
+        <li><a href="#carta">Del mar</a></li>
+        <li><a href="#carta">Bar &amp; Coctelería</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li>Plaza Aníbal Pinto 339</li>
+        <li>Valparaíso, Chile</li>
+        <li>contacto@fuentebavara.cl</li>
+        <li>+56 9 XXXX XXXX</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 Fuente Bávara — Todos los derechos reservados</span>
+    <span>Demo de rediseño web · Propuesta N°1 "Editorial Bávara"</span>
+  </div>
+</footer>
+
+<a class="wsp" href="https://wa.me/56900000000?text=Hola!%20Quiero%20reservar%20una%20mesa" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script>
+const MENU=[
+{tab:"Desayunos",groups:[{t:"Hasta las 12:00 hrs",items:[
+["Tostada mantequilla","",2400],["Tostada mermelada","",2400],["Tostada palta","",2700],
+["Paila jamón queso","3 huevos",4600],["Paila con huevos","3 huevos",3800],["Paila jamón","3 huevos",4300],
+["Café o té","",1490],["Café con leche","",1790],["Leche caliente","",2100],["Leche con plátano grande","Medio litro",4400],
+["Huevos con queso fundido","Jamón o tocino, jugo, té o café",6100],
+["Desayuno completo","Tostadas con mantequilla y mermelada, jugo de frutas, té o café y huevos a la sartén",6600]]}]},
+{tab:"Sándwiches",groups:[
+{t:"Tradicionales",items:[
+["Completo Especial","Vienesa especial Llanquihue, tomate, chucrut, palta, mayonesa",3900],
+["Vienesa Pebre Mayo","Vienesa especial Llanquihue, pebre y mayonesa",3400],
+["As Italiano carne de res","Tomate, palta, mayonesa",5100],
+["Churrasco Completo o Italiano","Carne de res, tomate, palta, chucrut, mayonesa",7500],
+["Churrasco Chacarero","Carne de res, tomate, ají verde, porotos verdes, mayonesa",7700],
+["Ave solo o palta","",6300],["Ave Completo o Italiano","",7500],["Ave Queso","",7900],
+["Lomito Mayo","",6500],["Lomito de cerdo solo o palta","",6500],
+["Lomito de cerdo Completo o Italiano","Tomate, palta, chucrut, mayonesa",7000],["Lomito de cerdo Queso","",7200],
+["Hamburguesa sola o mayo","",6900],["Hamburguesa Completa o Italiana","Tomate, palta, chucrut, mayonesa",8900],["Hamburguesa Queso","",8900],
+["Barros Jarpa","Jamón, queso caliente",5500],["Barros Luco","Carne de res, queso fundido",7500],
+["Barros Luco Champiñón","Carne de res, queso fundido, champiñón a la mantequilla",7900]]},
+{t:"Especiales de la casa",items:[
+["Bávaro","Lomito de cerdo, queso fundido, cebolla caramelizada, pepinillo y mayo",10500],
+["Sassi","Una carne a elección con champiñones, cebolla, pimiento, queso y mayonesa en pan ciabatta",10900],
+["Sassi Americano","Carne de res, huevo, tocino, tomate, pepinillo y mayo en pan ciabatta",10900],
+["Sassi Lomito","",10900],
+["Hamburgo","Hamburguesa, queso fundido, cebolla caramelizada, huevo frito, lechuga y mayonesa",11500],
+["Cheeseburger","Hamburguesa, queso fundido, tomate, lechuga, cebolla y mayonesa",11500],
+["Filete de vacuno Completo o Italiano","Tomate, palta, chucrut, mayonesa",9800],
+["Filete de vacuno Queso","",9800]]},
+{t:"Mechada de vacuno",items:[
+["Mechada Queso Champiñón","Carne, queso, champiñones salteados a la mantequilla",10500],
+["Mechada Italiana","Carne, tomate, palta, mayonesa casera",10500],
+["Mechada Palta Queso","Carne, palta, queso fundido",10500],
+["Mechada Italiana Queso","Carne, tomate, palta, queso fundido y mayo casera",10800],
+["Mechada del Huerto","Carne, lechuga, palta, porotos verdes, pepinos, tomate, ají verde, mayo casera",10800],
+["Mechada Porkys","Carne, tocino, chorizos, huevo, cebolla caramelizada, salsa pomodoro, aceitunas, pimentón y queso fundido",10800],
+["Mechada Alemana","Carne, chucrut, pepinillos, lechuga, cebolla cruda, ají verde, mayo casera",10500]]},
+{t:"Vegetarianos",items:[
+["Gauda","Tomate, palta, queso gauda, lechuga, porotos verdes y mayo",7900],
+["Bonn","Lechuga, tomate, pepinillo, cebolla, queso gauda, champiñones salteados a la mantequilla y choclo",7900]]},
+{t:"Agregados",items:[
+["Porción de palta","",2700],["Porción mayo","",1700],["Agregado de queso","",2400],
+["Agregado tocino","",2900],["Agregado de tomate","",1700],["Agregado de ají","",1700]]}]},
+{tab:"Pizzas & Pastas",groups:[
+{t:"Pizzas",items:[
+["Napolitana","Salsa pomodoro, tomate, jamón, queso y aceitunas",6900],
+["Bavaria","Salsa pomodoro, carne de res, chorizo, tocino, cebolla, tomate, champiñones, queso y orégano",7500],
+["Müller","Salsa pomodoro, choclo, porotos verdes, tomate, champiñones, pepinillos, aceitunas y queso",6500]]},
+{t:"Pastas",items:[
+["Spaguetti boloñesa","",8500],["Spaguetti carne mechada","",9900],["Spaguetti salsa Alfredo","",7700],
+["Spaguetti salsa camarón","",11500],["Spaguetti al pesto","",8600],["Lasaña","",9600],
+["Ravioles boloñesa","",9800],["Ravioles salsa Alfredo","",9800],["Ravioles al pesto","",9800]]}]},
+{tab:"Platos",groups:[
+{t:"Platos caseros",items:[
+["Pastel de choclo","",9600],["Cazuela de ave","Con ensalada surtida chica",9300],["Cazuela de vacuno","Con ensalada surtida chica",9300],
+["Callitos a la italiana","",9600],["Merluza frita con agregado","",9000],["Merluza frita a lo pobre","",9800],
+["Bife a lo pobre","",10800],["Pulpa de cerdo a lo pobre","",11400],["Pulpa de cerdo con agregado","",11000],
+["Escalopa a lo pobre","",9800],["Escalopa con agregado","",9500],["Carne al jugo con agregado","",11200],
+["Filete de pollo con agregado","",8900],["Filete de pollo a lo pobre","",10500],["Plato del día","Con ensalada",8500]]},
+{t:"Carnes",items:[
+["Lomo liso 300 grs","",12900],["Lomo a lo pobre","",17500],["1/4 de pollo con agregado","",8990],
+["1/4 de pollo a lo pobre","",9870],["Filete de vacuno 250 grs","",14900],["Lomo de cerdo 330 grs","",7500],
+["Lomo de cerdo a lo pobre","",12900],["Chuletas de cerdo con agregado","",9800],["Par de chuletas de cerdo a lo pobre","",13900],
+["Malaya 400 grs con agregado","",10900],["Malaya 400 grs a lo pobre","",11900]]},
+{t:"Chorrillanas",items:[
+["Tradicional","",18400],["Especial","",19900],["Chorrillana + Bebida","",16900],["Chorrillana + Schop","",18900]]}]},
+{tab:"Del Mar",groups:[{t:"Platos del mar",items:[
+["Salmón a la plancha","",14000],["Salmón a lo pobre","",18100],["Salmón Margarita","",20700],
+["Reineta a la plancha","",10800],["Reineta a lo pobre","",14900],["Reineta Margarita","",18900],
+["Paila marina","",15300],["Albacora con agregado","",9700],["Albacora a lo pobre","",11000],
+["Pastel de jaiba","",14900],["Merluza austral con agregado","",12500],["Merluza austral a lo pobre","",15900],
+["Congrio","",11500],["Congrio a lo pobre","",17000]]}]},
+{tab:"Entradas & Ensaladas",groups:[
+{t:"Entradas",items:[
+["Palta cardenal","",10400],["Lechuga con palta y camarones","Base de lechuga, camarones y mayonesa",13100],
+["Crudo","200 grs de posta, cebolla, pepinillos, pimientos, cilantro y salsa de ajo",14300],
+["Tártaro","200 grs de posta, cebolla, pepinillos, pimientos, cilantro, yema de huevo y salsa de ajo",15700],
+["Plato parrillero","1/2 lomo, prieta, chuleta de cerdo, ensalada y longanizas con papas doradas",10100]]},
+{t:"Ensaladas",items:[
+["Ensalada César","Filete de ave, lechuga, queso parmesano, crutones y salsa césar",10100],
+["Atún","Atún, lechuga, palta, tomate, choclo y ciboulette",11400],
+["Camarón","Camarones, lechuga, tomate, palta, palmitos y cilantro",23900]]},
+{t:"Picoteos",items:[
+["Munich","Para 2 o 3 personas: carne de res, filete de ave, pulpa de cerdo, champiñones y mayonesa de ajo",11500],
+["Quesadilla de vacuno","Carne de res, cebolla caramelizada y queso",10600],
+["Quesadilla vegetariana","Champiñón, tomate, poroto verde, choclo",4700]]},
+{t:"Acompañamientos",items:[
+["Arroz","",4700],["Puré","",5900],["Papas fritas","",4700],["Ensalada surtida","",7200],
+["Ensalada surtida palta","",6300],["Champiñones salteados","",7200],["Ensalada lechuga, palta, palmitos","",1200],
+["Huevo","",1800],["Vienesa","",7700],["Ensalada surtida familiar","",4900]]}]},
+{tab:"Postres",groups:[{t:"Postres",items:[
+["Papayas al jugo con crema","",4500],["Duraznos al jugo","",4700],["Frutillas al jugo con crema","",3000],
+["Leche asada","",3000],["Helado simple","",4800],["Helado doble con crema","",5200],
+["Cheesecake de frambuesa","",4990],["Café helado","",4900]]}]},
+{tab:"Bar",groups:[
+{t:"Cervezas",items:[
+["Kunstmann Torobayo","",4900],["Kunstmann Bock negra","",4900],["Kunstmann sin filtrar artesanal","",4900],
+["Kunstmann zero alcohol","",4900],["Austral Patagonia","",5100],["Austral Calafate","",4900],
+["Austral Yagán","",4900],["Austral Lager","",4900],["Corona","",4000],["Royal Guard Lager","",4000],
+["Heineken","",4000],["Heineken 0.0","",4000],["Malta","",3990]]},
+{t:"Schop",items:[
+["Schop chico 333cc","Royal, Heineken",3790],["Schop chico 333cc","Kunstmann Torobayo",3900],
+["Schop chico 333cc","Austral Calafate",3900],["Schop grande 500cc","Royal, Heineken",4900],
+["Schop grande 500cc","Kunstmann Torobayo",7900],["Schop grande 500cc","Austral Calafate",7900]]},
+{t:"Bebidas & Jugos",items:[
+["Bebida botella","",3100],["Bebida máquina","",2990],["Jugo grande","",4500],["Limonada","",3700],["Limonada menta jengibre","",4200]]},
+{t:"Vinos",items:[
+["Botellín","",2700],["Casillero del Diablo 3/4","",14900],["Santa Emiliana 3/4","",8300],
+["Casillero del Diablo 1/2","",8500],["Santa Emiliana 1/2","",6500],["Misiones de Rengo Plomo 3/4","",10500],
+["Misiones de Rengo Dorado Reserva 3/4","",14900],["Undurraga Pinot / RHIN 3/4","",10500],
+["Undurraga Pinot / RHIN 1/2","",7500],["Doña Isidora Riesling 1/2","",10700],["Don Luis Chardonnay 3/4","",16900]]},
+{t:"Whisky",items:[
+["Johnnie Walker Rojo","",8500],["Ballantine's","",7500],["J&B","",7500],["100 Pipers","",7000],
+["Jack Daniel's","",12500],["Johnnie Walker Negro 12 años","",12500]]},
+{t:"Coctelería",items:[
+["Aperol Spritz","",7900],["Ramazzotti","",7900],["Mojito tradicional","",7200],["Pisco sour simple","",3990],
+["Pisco sour doble","",6500],["Vaina","",4500],["Piña colada","",8600],["Primavera licor nacional","",7000],
+["Primavera licor importado","",7200],["Caipiriña","",5900],["Kaipiroska","",7200],["Kaipirisima","",7200],
+["Tequila Margarita","",8100],["Tequila Sunrise","",8100],["Tequila en México","",7500],["Martini","",7200],
+["Old Fashioned","",11100],["Campari Americano","",8100],["Tom Collins","",8700],["John Collins","",8700],["Clavo Oxidado","",9700]]},
+{t:"Aperitivos",items:[
+["Pisco sour nacional","",3990],["Pisco sour nacional doble","",6500],["Vaina nacional","",4500],
+["Whisky sour","",7200],["Vodka sour","",6300],["Daiquiri","",8600],["Manhattan","",10100]]},
+{t:"Tragos largos",items:[
+["Pisco 46º Alto del Carmen","",7100],["Pisco 35º Alto del Carmen","",6200],["Pisco 35º Capel","",5400],
+["Gin Beefeater","",8100],["Vodka Stolichnaya","",7500],["Vodka Borsoi","",8100],
+["Ron Bacardí","",8100],["Ron Sierra Morena","",6500],["Ron Habana Club","",7500]]},
+{t:"Bajativos",items:[
+["Menta frappé","",4600],["Mentira frívola","",5200],["Manzanilla frappé","",4500],
+["Pichuncho","",5500],["Araucano","",4500],["Bitter","",4700],["Anís","",5200]]}]}
+];
+
+const fmt=p=>'$'+p.toLocaleString('es-CL');
+const tabsEl=document.getElementById('tabs');
+const gruposEl=document.getElementById('grupos');
+
+function render(i){
+  document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('activa',j===i));
+  gruposEl.innerHTML=MENU[i].groups.map(g=>`
+    <div class="grupo">
+      <h4>${g.t}</h4>
+      <div class="items">${g.items.map(it=>`
+        <div class="item">
+          <div><div class="nom">${it[0]}</div>${it[1]?`<div class="desc">${it[1]}</div>`:''}</div>
+          <div class="precio">${fmt(it[2])}</div>
+        </div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+MENU.forEach((m,i)=>{
+  const b=document.createElement('button');
+  b.className='tab';b.textContent=m.tab;
+  b.onclick=()=>render(i);
+  tabsEl.appendChild(b);
+});
+render(0);
+
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
