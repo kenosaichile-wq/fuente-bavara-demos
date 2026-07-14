@@ -96,10 +96,10 @@ nav{
 .nav-links a:hover{color:var(--dorado);background:rgba(255,255,255,.06)}
 
 /* ===== HERO ===== */
-/* ►► FONDO HERO ◄◄ — foto real del salón (arquitectura y pilares pintados).
-   Para cambiarla: reemplazar assets/interior_0206.jpg */
+/* ►► FONDO HERO ◄◄ — el patrón brindando en el salón (imagen IA, sin gente real).
+   Para cambiarla: reemplazar assets/hero_patron.jpg */
 .hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;overflow:hidden}
-.hero-bg{position:absolute;inset:-60px 0;background:url('assets/interior_0206_blur.jpg') center 32%/cover;will-change:transform}
+.hero-bg{position:absolute;inset:-60px 0;background:url('assets/hero_patron.jpg') center 55%/cover;will-change:transform}
 .hero::before{content:'';position:absolute;inset:0;z-index:1;
   background:linear-gradient(180deg,rgba(20,15,8,.45) 0%,rgba(20,15,8,.1) 34%,rgba(15,11,6,.52) 72%,rgba(12,9,5,.88) 100%)}
 .hero::after{content:'';position:absolute;inset:0;z-index:1;box-shadow:inset 0 0 190px rgba(10,7,4,.75)}
@@ -404,7 +404,7 @@ footer{padding:80px 20px 30px;color:#D9C391;
       <a class="btn oscuro" href="#pizarra">La Pizarra de Hoy</a>
     </div>
   </div>
-  <div class="hero-nota"><b>Nuestro salón</b><br>los techos pintados más famosos de Viña del Mar</div>
+  <div class="hero-nota"><b>El patrón te espera</b><br>con un schop bien helado en el salón pintado de Viña del Mar</div>
   <img class="hero-logo" src="assets/logo.png" alt="Fuente Bávara">
 </header>
 
