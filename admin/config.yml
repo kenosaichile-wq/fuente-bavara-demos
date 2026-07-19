@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: kenosaichile-wq/fuente-bavara-demos
+  branch: main
+  base_url: https://fuente-bavara-demos.vercel.app
+  auth_endpoint: api/auth
+
+publish_mode: simple
+media_folder: "assets"
+public_folder: "assets"
+
+locale: "es"
+
+collections:
+  - name: "site"
+    label: "Contenido del Sitio"
+    files:
+      - file: "content/site.json"
+        label: "Pagina principal"
+        name: "site"
+        fields:
+          - label: "Portada"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Barra superior (Fundada en...)", name: "badge", widget: "string" }
+              - { label: "Texto bajo el titulo", name: "sub", widget: "text" }
+              - { label: "Nota derecha - titulo", name: "nota_titulo", widget: "string" }
+              - { label: "Nota derecha - texto", name: "nota_texto", widget: "text" }
+
+          - label: "La Pizarra de Hoy"
+            name: "pizarra"
+            widget: "object"
+            collapsed: false
+            hint: "Las promociones que se muestran escritas con tiza."
+            fields:
+              - { label: "Titulo de la seccion", name: "titulo", widget: "string" }
+              - label: "Promociones"
+                name: "promos"
+                widget: "list"
+                label_singular: "Promocion"
+                summary: "{{fields.titulo}} — {{fields.precio}}"
+                fields:
+                  - { label: "Titulo", name: "titulo", widget: "string" }
+                  - { label: "Subtitulo", name: "subtitulo", widget: "string", required: false }
+                  - { label: "Ingredientes / descripcion", name: "ingredientes", widget: "text" }
+                  - { label: "Precio (ej $ 5.990)", name: "precio", widget: "string" }
+                  - { label: "Nota inferior", name: "nota", widget: "string", required: false }
+                  - { label: "Foto del plato (PNG recortado)", name: "imagen", widget: "image", required: false }
+
+          - label: "Carta de Menu"
+            name: "carta"
+            widget: "list"
+            label_singular: "Categoria"
+            summary: "{{fields.categoria}}"
+            hint: "Categorias de la carta. Cada una tiene grupos, y cada grupo sus platos con precio."
+            fields:
+              - { label: "Nombre de la categoria", name: "categoria", widget: "string" }
+              - { label: "Icono (emoji)", name: "icono", widget: "string", required: false, hint: "Ej: 🍕 ☕ 🍺" }
+              - label: "Grupos"
+                name: "grupos"
+                widget: "list"
+                label_singular: "Grupo"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Titulo del grupo", name: "titulo", widget: "string" }
+                  - label: "Platos"
+                    name: "items"
+                    widget: "list"
+                    label_singular: "Plato"
+                    summary: "{{fields.nombre}} — ${{fields.precio}}"
+                    fields:
+                      - { label: "Nombre", name: "nombre", widget: "string" }
+                      - { label: "Descripcion", name: "descripcion", widget: "string", required: false }
+                      - { label: "Precio (solo numero, ej 7500)", name: "precio", widget: "number", value_type: "int" }
+
+          - label: "Contacto y redes"
+            name: "contacto"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Ciudad", name: "ciudad", widget: "string" }
+              - { label: "Direccion", name: "direccion", widget: "string" }
+              - { label: "Horario Lun a Jue", name: "horario_lj", widget: "string" }
+              - { label: "Horario Vie y Sab", name: "horario_vs", widget: "string" }
+              - { label: "Horario Domingo", name: "horario_dom", widget: "string" }
+              - { label: "Telefono", name: "telefono", widget: "string" }
+              - { label: "WhatsApp (solo numeros, ej 56912345678)", name: "whatsapp", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Link Instagram", name: "instagram", widget: "string" }

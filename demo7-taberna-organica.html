@@ -262,6 +262,7 @@ section{padding:90px 20px;position:relative}
 .tabs::-webkit-scrollbar{display:none}
 .tab{font-family:'Grenze Gotisch',serif;font-weight:600;font-size:1.1rem;padding:9px 21px;cursor:pointer;transition:.15s;color:var(--tiza-suave);
   background:transparent;border:2px solid rgba(242,239,230,.45);border-radius:40px;white-space:nowrap}
+.tab .tab-ico{display:none}
 .tab:hover{color:var(--tiza);border-color:rgba(242,239,230,.85)}
 .tab.activa{color:var(--pizarra);background:var(--tiza);border-color:var(--tiza);box-shadow:0 0 14px rgba(242,239,230,.35)}
 .grupos{margin-top:44px}
@@ -363,7 +364,27 @@ footer{padding:80px 20px 30px;color:#D9C391;
 
 @media(max-width:980px){
   .nav-links{display:none}
-  .tabs{top:70px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:12px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .pizarra{padding:56px 10px 46px}
+  .grupo{padding:38px 12px 30px}
+  /* Botonera móvil: pastillas metálicas apiladas con icono en círculo (todas visibles) */
+  .tabs{position:static;flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:13px;margin:42px 0 0;padding:6px 8px;background:transparent;border:none;box-shadow:none;overflow:visible}
+  .tab{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;max-width:352px;margin:0 auto;
+    padding:6px 7px 6px 17px;font-size:.96rem;font-weight:700;border-radius:50px;color:#3A2005;white-space:nowrap;letter-spacing:0;
+    border:1px solid #5E3F05;text-shadow:0 1px 0 rgba(255,240,180,.7);
+    background:
+      linear-gradient(105deg,transparent 34%,rgba(255,255,255,.5) 42%,rgba(255,255,255,.1) 48%,transparent 55%),
+      linear-gradient(180deg,#FDEFAE 0%,#F4D25E 16%,#E9B824 38%,#C08F10 55%,#A87A08 68%,#D9AC2E 84%,#8F6A06 100%);
+    box-shadow:0 0 0 2px #8F6A06,0 4px 0 #59390B,0 8px 14px rgba(0,0,0,.5),
+      inset 0 1px 1px rgba(255,255,255,.9),inset 0 -4px 6px rgba(110,70,5,.55)}
+  .tab .tab-txt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;text-align:left}
+  .tab .tab-ico{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;font-size:1.2rem;
+    background:radial-gradient(circle at 35% 30%,#5A3212,#2B1606 75%);
+    box-shadow:inset 0 3px 6px rgba(0,0,0,.65),0 1px 0 rgba(255,244,200,.45)}
+  .tab.activa{color:var(--tiza);text-shadow:0 -1px 0 rgba(0,0,0,.7);
+    background:linear-gradient(180deg,#3A362F,#211E1A 60%,#2C2822);
+    border-color:#100E0B;
+    box-shadow:0 0 0 2px #100E0B,0 2px 0 #0B0A08,inset 0 4px 9px rgba(0,0,0,.75)}
+  .tab.activa .tab-ico{background:radial-gradient(circle at 35% 30%,#F9E27A,#C9920F 75%);box-shadow:inset 0 2px 3px rgba(255,255,255,.5),0 2px 5px rgba(0,0,0,.6)}
   .hero{min-height:78vh}
   .hero-nota,.hero-logo{display:none}
   .fotostrip-track img{height:130px}
@@ -808,12 +829,18 @@ function render(i,scroll){
     if(Math.abs(scrollY-y)>60) window.scrollTo({top:y,behavior:'smooth'});
   }
 }
-MENU.forEach((m,i)=>{
-  const b=document.createElement('button');
-  b.className='tab';b.textContent=m.tab;
-  b.onclick=()=>render(i,true);
-  tabsEl.appendChild(b);
-});
+const ICONOS={"Desayunos":"☕","Sándwiches":"🥪","Pizzas & Pastas":"🍕","Platos Caseros":"🍲","Platos del Mar":"🐟","Entradas & Ensaladas":"🥗","Postres":"🍰","Bar":"🍺"};
+function construirTabs(){
+  tabsEl.innerHTML='';
+  MENU.forEach((m,i)=>{
+    const b=document.createElement('button');
+    b.className='tab';
+    b.innerHTML='<span class="tab-txt">'+m.tab+'</span><span class="tab-ico">'+(m.icono||ICONOS[m.tab]||'🥨')+'</span>';
+    b.onclick=()=>render(i,true);
+    tabsEl.appendChild(b);
+  });
+}
+construirTabs();
 render(0,false);
 
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1});
@@ -825,6 +852,57 @@ addEventListener('scroll',()=>{
   const y=Math.min(scrollY,900);
   heroBg.style.transform=`translateY(${(y*0.22).toFixed(1)}px)`;
 },{passive:true});
+
+/* ===== Contenido editable desde el Panel de Administración (content/site.json) =====
+   Si el archivo no existe o falla la carga, la página usa el contenido embebido. */
+function aplicarContenido(d){
+  if(d.hero){
+    const badge=document.querySelector('.hero-desde');
+    if(badge&&d.hero.badge) badge.innerHTML=d.hero.badge.replace(/(\d{4})/,'<b>$1</b>');
+    const sub=document.querySelector('.hero-sub');
+    if(sub&&d.hero.sub) sub.textContent=d.hero.sub;
+    const nota=document.querySelector('.hero-nota');
+    if(nota&&d.hero.nota_titulo) nota.innerHTML='<b>'+d.hero.nota_titulo+'</b><br>'+(d.hero.nota_texto||'');
+  }
+  if(d.pizarra){
+    const tit=document.querySelector('.pizarra .titulo');
+    if(tit&&d.pizarra.titulo) tit.textContent=d.pizarra.titulo;
+    const tab=document.querySelector('.tablero');
+    if(tab&&Array.isArray(d.pizarra.promos)&&d.pizarra.promos.length){
+      tab.innerHTML=d.pizarra.promos.map(p=>`
+        <div class="promo reveal visible">
+          <h3>${p.titulo}${p.subtitulo?` <em>${p.subtitulo}</em>`:''}</h3>
+          ${p.imagen?`<img src="${p.imagen}" alt="${p.titulo}">`:''}
+          <p class="ing">${(p.ingredientes||'').replace(/\n/g,'<br>')}</p>
+          <span class="precio-tiza">${p.precio||''}</span>
+          ${p.nota?`<p class="nota">${p.nota}</p>`:''}
+        </div>`).join('');
+    }
+  }
+  if(Array.isArray(d.carta)&&d.carta.length){
+    MENU.length=0;
+    d.carta.forEach(c=>MENU.push({
+      tab:c.categoria, icono:c.icono,
+      groups:(c.grupos||[]).map(g=>({t:g.titulo,items:(g.items||[]).map(it=>[it.nombre,it.descripcion||'',it.precio])}))
+    }));
+    construirTabs();
+    render(0,false);
+  }
+  if(d.contacto){
+    const c=d.contacto;
+    const card=document.querySelector('.ubi-card');
+    if(card){
+      const h3=card.querySelector('h3'); if(h3&&c.ciudad)h3.textContent=c.ciudad;
+      const dir=card.querySelector('.dir'); if(dir&&c.direccion)dir.textContent=c.direccion;
+      const ul=card.querySelector('ul');
+      if(ul)ul.innerHTML=`<li><b>Lun a Jue:</b> ${c.horario_lj||''}</li><li><b>Vie y Sáb:</b> ${c.horario_vs||''}</li><li><b>Domingo:</b> ${c.horario_dom||''}</li><li><b>Teléfono:</b> ${c.telefono||''}</li>`;
+    }
+    if(c.whatsapp) document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{a.href=a.href.replace(/wa\.me\/\d+/,'wa.me/'+c.whatsapp)});
+    if(c.email) document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.href='mailto:'+c.email);
+    if(c.instagram) document.querySelectorAll('a[href*="instagram.com"]').forEach(a=>a.href=c.instagram);
+  }
+}
+fetch('content/site.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d)aplicarContenido(d)}).catch(()=>{});
 </script>
 </body>
 </html>

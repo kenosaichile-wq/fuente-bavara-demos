@@ -1,0 +1,1335 @@
+{
+  "hero": {
+    "badge": "Fundada en 1970 en Viña del Mar",
+    "sub": "Bajo bóvedas pintadas a mano y pilares centenarios: completos con chucrut, chorrillanas al centro y schop artesanal helado.",
+    "nota_titulo": "El patrón te espera",
+    "nota_texto": "con un schop bien helado en el salón pintado de Viña del Mar"
+  },
+  "pizarra": {
+    "titulo": "La Pizarra de Hoy",
+    "promos": [
+      {
+        "titulo": "Super OFERTA",
+        "subtitulo": "~ Hamburguesa casera ~",
+        "ingredientes": "Hamburguesa casera, tomate, palta y mayonesa,\nmás té ó café ó vaso de bebida",
+        "precio": "$ 5.990",
+        "nota": "✎ Hecho a mano · Producto chileno",
+        "imagen": "assets/cut_plato120.png"
+      },
+      {
+        "titulo": "Super LOMITO",
+        "subtitulo": "~ Lomito de cerdo ~",
+        "ingredientes": "Lomito de cerdo, tomate, palta, lechuga y mayonesa casera,\nmás té ó café ó vaso de bebida",
+        "precio": "$ 8.990",
+        "nota": "✎ Hecho a mano · Producto chileno",
+        "imagen": "assets/cut_plato123.png"
+      }
+    ]
+  },
+  "carta": [
+    {
+      "categoria": "Desayunos",
+      "icono": "☕",
+      "grupos": [
+        {
+          "titulo": "Hasta las 12:00 hrs",
+          "items": [
+            {
+              "nombre": "Tostada mantequilla",
+              "descripcion": "",
+              "precio": 2400
+            },
+            {
+              "nombre": "Tostada mermelada",
+              "descripcion": "",
+              "precio": 2400
+            },
+            {
+              "nombre": "Tostada palta",
+              "descripcion": "",
+              "precio": 2700
+            },
+            {
+              "nombre": "Paila jamón queso",
+              "descripcion": "3 huevos",
+              "precio": 4600
+            },
+            {
+              "nombre": "Paila con huevos",
+              "descripcion": "3 huevos",
+              "precio": 3800
+            },
+            {
+              "nombre": "Paila jamón",
+              "descripcion": "3 huevos",
+              "precio": 4300
+            },
+            {
+              "nombre": "Café o té",
+              "descripcion": "",
+              "precio": 1490
+            },
+            {
+              "nombre": "Café con leche",
+              "descripcion": "",
+              "precio": 1790
+            },
+            {
+              "nombre": "Leche caliente",
+              "descripcion": "",
+              "precio": 2100
+            },
+            {
+              "nombre": "Leche con plátano grande",
+              "descripcion": "Medio litro",
+              "precio": 4400
+            },
+            {
+              "nombre": "Huevos con queso fundido",
+              "descripcion": "Jamón o tocino, jugo, té o café",
+              "precio": 6100
+            },
+            {
+              "nombre": "Desayuno completo",
+              "descripcion": "Tostadas con mantequilla y mermelada, jugo de frutas, té o café y huevos a la sartén",
+              "precio": 6600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Sándwiches",
+      "icono": "🥪",
+      "grupos": [
+        {
+          "titulo": "Tradicionales",
+          "items": [
+            {
+              "nombre": "Completo Especial",
+              "descripcion": "Vienesa especial Llanquihue, tomate, chucrut, palta, mayonesa",
+              "precio": 3900
+            },
+            {
+              "nombre": "Vienesa Pebre Mayo",
+              "descripcion": "Vienesa especial Llanquihue, pebre y mayonesa",
+              "precio": 3400
+            },
+            {
+              "nombre": "As Italiano carne de res",
+              "descripcion": "Tomate, palta, mayonesa",
+              "precio": 5100
+            },
+            {
+              "nombre": "Churrasco Completo o Italiano",
+              "descripcion": "Carne de res, tomate, palta, chucrut, mayonesa",
+              "precio": 7500
+            },
+            {
+              "nombre": "Churrasco Chacarero",
+              "descripcion": "Carne de res, tomate, ají verde, porotos verdes, mayonesa",
+              "precio": 7700
+            },
+            {
+              "nombre": "Ave solo o palta",
+              "descripcion": "",
+              "precio": 6300
+            },
+            {
+              "nombre": "Ave Completo o Italiano",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "Ave Queso",
+              "descripcion": "",
+              "precio": 7900
+            },
+            {
+              "nombre": "Lomito Mayo",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Lomito de cerdo solo o palta",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Lomito de cerdo Completo o Italiano",
+              "descripcion": "Tomate, palta, chucrut, mayonesa",
+              "precio": 7000
+            },
+            {
+              "nombre": "Lomito de cerdo Queso",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Hamburguesa sola o mayo",
+              "descripcion": "",
+              "precio": 6900
+            },
+            {
+              "nombre": "Hamburguesa Completa o Italiana",
+              "descripcion": "Tomate, palta, chucrut, mayonesa",
+              "precio": 8900
+            },
+            {
+              "nombre": "Hamburguesa Queso",
+              "descripcion": "",
+              "precio": 8900
+            },
+            {
+              "nombre": "Barros Jarpa",
+              "descripcion": "Jamón, queso caliente",
+              "precio": 5500
+            },
+            {
+              "nombre": "Barros Luco",
+              "descripcion": "Carne de res, queso fundido",
+              "precio": 7500
+            },
+            {
+              "nombre": "Barros Luco Champiñón",
+              "descripcion": "Carne de res, queso fundido, champiñón a la mantequilla",
+              "precio": 7900
+            }
+          ]
+        },
+        {
+          "titulo": "Especiales de la casa",
+          "items": [
+            {
+              "nombre": "Bávaro",
+              "descripcion": "Lomito de cerdo, queso fundido, cebolla caramelizada, pepinillo y mayo",
+              "precio": 10500
+            },
+            {
+              "nombre": "Sassi",
+              "descripcion": "Una carne a elección con champiñones, cebolla, pimiento, queso y mayonesa en pan ciabatta",
+              "precio": 10900
+            },
+            {
+              "nombre": "Sassi Americano",
+              "descripcion": "Carne de res, huevo, tocino, tomate, pepinillo y mayo en pan ciabatta",
+              "precio": 10900
+            },
+            {
+              "nombre": "Sassi Lomito",
+              "descripcion": "",
+              "precio": 10900
+            },
+            {
+              "nombre": "Hamburgo",
+              "descripcion": "Hamburguesa, queso fundido, cebolla caramelizada, huevo frito, lechuga y mayonesa",
+              "precio": 11500
+            },
+            {
+              "nombre": "Cheeseburger",
+              "descripcion": "Hamburguesa, queso fundido, tomate, lechuga, cebolla y mayonesa",
+              "precio": 11500
+            },
+            {
+              "nombre": "Filete de vacuno Completo o Italiano",
+              "descripcion": "Tomate, palta, chucrut, mayonesa",
+              "precio": 9800
+            },
+            {
+              "nombre": "Filete de vacuno Queso",
+              "descripcion": "",
+              "precio": 9800
+            }
+          ]
+        },
+        {
+          "titulo": "Mechada de vacuno",
+          "items": [
+            {
+              "nombre": "Mechada Queso Champiñón",
+              "descripcion": "Carne, queso, champiñones salteados a la mantequilla",
+              "precio": 10500
+            },
+            {
+              "nombre": "Mechada Italiana",
+              "descripcion": "Carne, tomate, palta, mayonesa casera",
+              "precio": 10500
+            },
+            {
+              "nombre": "Mechada Palta Queso",
+              "descripcion": "Carne, palta, queso fundido",
+              "precio": 10500
+            },
+            {
+              "nombre": "Mechada Italiana Queso",
+              "descripcion": "Carne, tomate, palta, queso fundido y mayo casera",
+              "precio": 10800
+            },
+            {
+              "nombre": "Mechada del Huerto",
+              "descripcion": "Carne, lechuga, palta, porotos verdes, pepinos, tomate, ají verde, mayo casera",
+              "precio": 10800
+            },
+            {
+              "nombre": "Mechada Porkys",
+              "descripcion": "Carne, tocino, chorizos, huevo, cebolla caramelizada, salsa pomodoro, aceitunas, pimentón y queso fundido",
+              "precio": 10800
+            },
+            {
+              "nombre": "Mechada Alemana",
+              "descripcion": "Carne, chucrut, pepinillos, lechuga, cebolla cruda, ají verde, mayo casera",
+              "precio": 10500
+            }
+          ]
+        },
+        {
+          "titulo": "Vegetarianos",
+          "items": [
+            {
+              "nombre": "Gauda",
+              "descripcion": "Tomate, palta, queso gauda, lechuga, porotos verdes y mayo",
+              "precio": 7900
+            },
+            {
+              "nombre": "Bonn",
+              "descripcion": "Lechuga, tomate, pepinillo, cebolla, queso gauda, champiñones salteados a la mantequilla y choclo",
+              "precio": 7900
+            }
+          ]
+        },
+        {
+          "titulo": "Agregados",
+          "items": [
+            {
+              "nombre": "Porción de palta",
+              "descripcion": "",
+              "precio": 2700
+            },
+            {
+              "nombre": "Porción mayo",
+              "descripcion": "",
+              "precio": 1700
+            },
+            {
+              "nombre": "Agregado de queso",
+              "descripcion": "",
+              "precio": 2400
+            },
+            {
+              "nombre": "Agregado tocino",
+              "descripcion": "",
+              "precio": 2900
+            },
+            {
+              "nombre": "Agregado de tomate",
+              "descripcion": "",
+              "precio": 1700
+            },
+            {
+              "nombre": "Agregado de ají",
+              "descripcion": "",
+              "precio": 1700
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Pizzas & Pastas",
+      "icono": "🍕",
+      "grupos": [
+        {
+          "titulo": "Pizzas",
+          "items": [
+            {
+              "nombre": "Napolitana",
+              "descripcion": "Salsa pomodoro, tomate, jamón, queso y aceitunas",
+              "precio": 6900
+            },
+            {
+              "nombre": "Bavaria",
+              "descripcion": "Salsa pomodoro, carne de res, chorizo, tocino, cebolla, tomate, champiñones, queso y orégano",
+              "precio": 7500
+            },
+            {
+              "nombre": "Müller",
+              "descripcion": "Salsa pomodoro, choclo, porotos verdes, tomate, champiñones, pepinillos, aceitunas y queso",
+              "precio": 6500
+            }
+          ]
+        },
+        {
+          "titulo": "Pastas",
+          "items": [
+            {
+              "nombre": "Spaguetti boloñesa",
+              "descripcion": "",
+              "precio": 8500
+            },
+            {
+              "nombre": "Spaguetti carne mechada",
+              "descripcion": "",
+              "precio": 9900
+            },
+            {
+              "nombre": "Spaguetti salsa Alfredo",
+              "descripcion": "",
+              "precio": 7700
+            },
+            {
+              "nombre": "Spaguetti salsa camarón",
+              "descripcion": "",
+              "precio": 11500
+            },
+            {
+              "nombre": "Spaguetti al pesto",
+              "descripcion": "",
+              "precio": 8600
+            },
+            {
+              "nombre": "Lasaña",
+              "descripcion": "",
+              "precio": 9600
+            },
+            {
+              "nombre": "Ravioles boloñesa",
+              "descripcion": "",
+              "precio": 9800
+            },
+            {
+              "nombre": "Ravioles salsa Alfredo",
+              "descripcion": "",
+              "precio": 9800
+            },
+            {
+              "nombre": "Ravioles al pesto",
+              "descripcion": "",
+              "precio": 9800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Platos Caseros",
+      "icono": "🍲",
+      "grupos": [
+        {
+          "titulo": "Platos caseros",
+          "items": [
+            {
+              "nombre": "Pastel de choclo",
+              "descripcion": "",
+              "precio": 9600
+            },
+            {
+              "nombre": "Cazuela de ave",
+              "descripcion": "Con ensalada surtida chica",
+              "precio": 9300
+            },
+            {
+              "nombre": "Cazuela de vacuno",
+              "descripcion": "Con ensalada surtida chica",
+              "precio": 9300
+            },
+            {
+              "nombre": "Callitos a la italiana",
+              "descripcion": "",
+              "precio": 9600
+            },
+            {
+              "nombre": "Merluza frita con agregado",
+              "descripcion": "",
+              "precio": 9000
+            },
+            {
+              "nombre": "Merluza frita a lo pobre",
+              "descripcion": "",
+              "precio": 9800
+            },
+            {
+              "nombre": "Bife a lo pobre",
+              "descripcion": "",
+              "precio": 10800
+            },
+            {
+              "nombre": "Pulpa de cerdo a lo pobre",
+              "descripcion": "",
+              "precio": 11400
+            },
+            {
+              "nombre": "Pulpa de cerdo con agregado",
+              "descripcion": "",
+              "precio": 11000
+            },
+            {
+              "nombre": "Escalopa a lo pobre",
+              "descripcion": "",
+              "precio": 9800
+            },
+            {
+              "nombre": "Escalopa con agregado",
+              "descripcion": "",
+              "precio": 9500
+            },
+            {
+              "nombre": "Carne al jugo con agregado",
+              "descripcion": "",
+              "precio": 11200
+            },
+            {
+              "nombre": "Filete de pollo con agregado",
+              "descripcion": "",
+              "precio": 8900
+            },
+            {
+              "nombre": "Filete de pollo a lo pobre",
+              "descripcion": "",
+              "precio": 10500
+            },
+            {
+              "nombre": "Plato del día",
+              "descripcion": "Con ensalada",
+              "precio": 8500
+            }
+          ]
+        },
+        {
+          "titulo": "Carnes",
+          "items": [
+            {
+              "nombre": "Lomo liso 300 grs",
+              "descripcion": "",
+              "precio": 12900
+            },
+            {
+              "nombre": "Lomo a lo pobre",
+              "descripcion": "",
+              "precio": 17500
+            },
+            {
+              "nombre": "1/4 de pollo con agregado",
+              "descripcion": "",
+              "precio": 8990
+            },
+            {
+              "nombre": "1/4 de pollo a lo pobre",
+              "descripcion": "",
+              "precio": 9870
+            },
+            {
+              "nombre": "Filete de vacuno 250 grs",
+              "descripcion": "",
+              "precio": 14900
+            },
+            {
+              "nombre": "Lomo de cerdo 330 grs",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "Lomo de cerdo a lo pobre",
+              "descripcion": "",
+              "precio": 12900
+            },
+            {
+              "nombre": "Chuletas de cerdo con agregado",
+              "descripcion": "",
+              "precio": 9800
+            },
+            {
+              "nombre": "Par de chuletas de cerdo a lo pobre",
+              "descripcion": "",
+              "precio": 13900
+            },
+            {
+              "nombre": "Malaya 400 grs con agregado",
+              "descripcion": "",
+              "precio": 10900
+            },
+            {
+              "nombre": "Malaya 400 grs a lo pobre",
+              "descripcion": "",
+              "precio": 11900
+            }
+          ]
+        },
+        {
+          "titulo": "Chorrillanas",
+          "items": [
+            {
+              "nombre": "Tradicional",
+              "descripcion": "",
+              "precio": 18400
+            },
+            {
+              "nombre": "Especial",
+              "descripcion": "",
+              "precio": 19900
+            },
+            {
+              "nombre": "Chorrillana + Bebida",
+              "descripcion": "",
+              "precio": 16900
+            },
+            {
+              "nombre": "Chorrillana + Schop",
+              "descripcion": "",
+              "precio": 18900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Platos del Mar",
+      "icono": "🐟",
+      "grupos": [
+        {
+          "titulo": "Platos del mar",
+          "items": [
+            {
+              "nombre": "Salmón a la plancha",
+              "descripcion": "",
+              "precio": 14000
+            },
+            {
+              "nombre": "Salmón a lo pobre",
+              "descripcion": "",
+              "precio": 18100
+            },
+            {
+              "nombre": "Salmón Margarita",
+              "descripcion": "",
+              "precio": 20700
+            },
+            {
+              "nombre": "Reineta a la plancha",
+              "descripcion": "",
+              "precio": 10800
+            },
+            {
+              "nombre": "Reineta a lo pobre",
+              "descripcion": "",
+              "precio": 14900
+            },
+            {
+              "nombre": "Reineta Margarita",
+              "descripcion": "",
+              "precio": 18900
+            },
+            {
+              "nombre": "Paila marina",
+              "descripcion": "",
+              "precio": 15300
+            },
+            {
+              "nombre": "Albacora con agregado",
+              "descripcion": "",
+              "precio": 9700
+            },
+            {
+              "nombre": "Albacora a lo pobre",
+              "descripcion": "",
+              "precio": 11000
+            },
+            {
+              "nombre": "Pastel de jaiba",
+              "descripcion": "",
+              "precio": 14900
+            },
+            {
+              "nombre": "Merluza austral con agregado",
+              "descripcion": "",
+              "precio": 12500
+            },
+            {
+              "nombre": "Merluza austral a lo pobre",
+              "descripcion": "",
+              "precio": 15900
+            },
+            {
+              "nombre": "Congrio",
+              "descripcion": "",
+              "precio": 11500
+            },
+            {
+              "nombre": "Congrio a lo pobre",
+              "descripcion": "",
+              "precio": 17000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Entradas & Ensaladas",
+      "icono": "🥗",
+      "grupos": [
+        {
+          "titulo": "Entradas",
+          "items": [
+            {
+              "nombre": "Palta cardenal",
+              "descripcion": "",
+              "precio": 10400
+            },
+            {
+              "nombre": "Lechuga con palta y camarones",
+              "descripcion": "Base de lechuga, camarones y mayonesa",
+              "precio": 13100
+            },
+            {
+              "nombre": "Crudo",
+              "descripcion": "200 grs de posta, cebolla, pepinillos, pimientos, cilantro y salsa de ajo",
+              "precio": 14300
+            },
+            {
+              "nombre": "Tártaro",
+              "descripcion": "200 grs de posta, cebolla, pepinillos, pimientos, cilantro, yema de huevo y salsa de ajo",
+              "precio": 15700
+            },
+            {
+              "nombre": "Plato parrillero",
+              "descripcion": "1/2 lomo, prieta, chuleta de cerdo, ensalada y longanizas con papas doradas",
+              "precio": 10100
+            }
+          ]
+        },
+        {
+          "titulo": "Ensaladas",
+          "items": [
+            {
+              "nombre": "Ensalada César",
+              "descripcion": "Filete de ave, lechuga, queso parmesano, crutones y salsa césar",
+              "precio": 10100
+            },
+            {
+              "nombre": "Atún",
+              "descripcion": "Atún, lechuga, palta, tomate, choclo y ciboulette",
+              "precio": 11400
+            },
+            {
+              "nombre": "Camarón",
+              "descripcion": "Camarones, lechuga, tomate, palta, palmitos y cilantro",
+              "precio": 23900
+            }
+          ]
+        },
+        {
+          "titulo": "Picoteos",
+          "items": [
+            {
+              "nombre": "Munich",
+              "descripcion": "Para 2 o 3 personas: carne de res, filete de ave, pulpa de cerdo, champiñones y mayonesa de ajo",
+              "precio": 11500
+            },
+            {
+              "nombre": "Quesadilla de vacuno",
+              "descripcion": "Carne de res, cebolla caramelizada y queso",
+              "precio": 10600
+            },
+            {
+              "nombre": "Quesadilla vegetariana",
+              "descripcion": "Champiñón, tomate, poroto verde, choclo",
+              "precio": 4700
+            }
+          ]
+        },
+        {
+          "titulo": "Acompañamientos",
+          "items": [
+            {
+              "nombre": "Arroz",
+              "descripcion": "",
+              "precio": 4700
+            },
+            {
+              "nombre": "Puré",
+              "descripcion": "",
+              "precio": 5900
+            },
+            {
+              "nombre": "Papas fritas",
+              "descripcion": "",
+              "precio": 4700
+            },
+            {
+              "nombre": "Ensalada surtida",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Ensalada surtida palta",
+              "descripcion": "",
+              "precio": 6300
+            },
+            {
+              "nombre": "Champiñones salteados",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Ensalada lechuga, palta, palmitos",
+              "descripcion": "",
+              "precio": 1200
+            },
+            {
+              "nombre": "Huevo",
+              "descripcion": "",
+              "precio": 1800
+            },
+            {
+              "nombre": "Vienesa",
+              "descripcion": "",
+              "precio": 7700
+            },
+            {
+              "nombre": "Ensalada surtida familiar",
+              "descripcion": "",
+              "precio": 4900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Postres",
+      "icono": "🍰",
+      "grupos": [
+        {
+          "titulo": "Postres",
+          "items": [
+            {
+              "nombre": "Papayas al jugo con crema",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Duraznos al jugo",
+              "descripcion": "",
+              "precio": 4700
+            },
+            {
+              "nombre": "Frutillas al jugo con crema",
+              "descripcion": "",
+              "precio": 3000
+            },
+            {
+              "nombre": "Leche asada",
+              "descripcion": "",
+              "precio": 3000
+            },
+            {
+              "nombre": "Helado simple",
+              "descripcion": "",
+              "precio": 4800
+            },
+            {
+              "nombre": "Helado doble con crema",
+              "descripcion": "",
+              "precio": 5200
+            },
+            {
+              "nombre": "Cheesecake de frambuesa",
+              "descripcion": "",
+              "precio": 4990
+            },
+            {
+              "nombre": "Café helado",
+              "descripcion": "",
+              "precio": 4900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoria": "Bar",
+      "icono": "🍺",
+      "grupos": [
+        {
+          "titulo": "Cervezas",
+          "items": [
+            {
+              "nombre": "Kunstmann Torobayo",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Kunstmann Bock negra",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Kunstmann sin filtrar artesanal",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Kunstmann zero alcohol",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Austral Patagonia",
+              "descripcion": "",
+              "precio": 5100
+            },
+            {
+              "nombre": "Austral Calafate",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Austral Yagán",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Austral Lager",
+              "descripcion": "",
+              "precio": 4900
+            },
+            {
+              "nombre": "Corona",
+              "descripcion": "",
+              "precio": 4000
+            },
+            {
+              "nombre": "Royal Guard Lager",
+              "descripcion": "",
+              "precio": 4000
+            },
+            {
+              "nombre": "Heineken",
+              "descripcion": "",
+              "precio": 4000
+            },
+            {
+              "nombre": "Heineken 0.0",
+              "descripcion": "",
+              "precio": 4000
+            },
+            {
+              "nombre": "Malta",
+              "descripcion": "",
+              "precio": 3990
+            }
+          ]
+        },
+        {
+          "titulo": "Schop",
+          "items": [
+            {
+              "nombre": "Schop chico 333cc",
+              "descripcion": "Royal, Heineken",
+              "precio": 3790
+            },
+            {
+              "nombre": "Schop chico 333cc",
+              "descripcion": "Kunstmann Torobayo",
+              "precio": 3900
+            },
+            {
+              "nombre": "Schop chico 333cc",
+              "descripcion": "Austral Calafate",
+              "precio": 3900
+            },
+            {
+              "nombre": "Schop grande 500cc",
+              "descripcion": "Royal, Heineken",
+              "precio": 4900
+            },
+            {
+              "nombre": "Schop grande 500cc",
+              "descripcion": "Kunstmann Torobayo",
+              "precio": 7900
+            },
+            {
+              "nombre": "Schop grande 500cc",
+              "descripcion": "Austral Calafate",
+              "precio": 7900
+            }
+          ]
+        },
+        {
+          "titulo": "Bebidas & Jugos",
+          "items": [
+            {
+              "nombre": "Bebida botella",
+              "descripcion": "",
+              "precio": 3100
+            },
+            {
+              "nombre": "Bebida máquina",
+              "descripcion": "",
+              "precio": 2990
+            },
+            {
+              "nombre": "Jugo grande",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Limonada",
+              "descripcion": "",
+              "precio": 3700
+            },
+            {
+              "nombre": "Limonada menta jengibre",
+              "descripcion": "",
+              "precio": 4200
+            }
+          ]
+        },
+        {
+          "titulo": "Vinos",
+          "items": [
+            {
+              "nombre": "Botellín",
+              "descripcion": "",
+              "precio": 2700
+            },
+            {
+              "nombre": "Casillero del Diablo 3/4",
+              "descripcion": "",
+              "precio": 14900
+            },
+            {
+              "nombre": "Santa Emiliana 3/4",
+              "descripcion": "",
+              "precio": 8300
+            },
+            {
+              "nombre": "Casillero del Diablo 1/2",
+              "descripcion": "",
+              "precio": 8500
+            },
+            {
+              "nombre": "Santa Emiliana 1/2",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Misiones de Rengo Plomo 3/4",
+              "descripcion": "",
+              "precio": 10500
+            },
+            {
+              "nombre": "Misiones de Rengo Dorado Reserva 3/4",
+              "descripcion": "",
+              "precio": 14900
+            },
+            {
+              "nombre": "Undurraga Pinot / RHIN 3/4",
+              "descripcion": "",
+              "precio": 10500
+            },
+            {
+              "nombre": "Undurraga Pinot / RHIN 1/2",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "Doña Isidora Riesling 1/2",
+              "descripcion": "",
+              "precio": 10700
+            },
+            {
+              "nombre": "Don Luis Chardonnay 3/4",
+              "descripcion": "",
+              "precio": 16900
+            }
+          ]
+        },
+        {
+          "titulo": "Whisky",
+          "items": [
+            {
+              "nombre": "Johnnie Walker Rojo",
+              "descripcion": "",
+              "precio": 8500
+            },
+            {
+              "nombre": "Ballantine's",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "J&B",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "100 Pipers",
+              "descripcion": "",
+              "precio": 7000
+            },
+            {
+              "nombre": "Jack Daniel's",
+              "descripcion": "",
+              "precio": 12500
+            },
+            {
+              "nombre": "Johnnie Walker Negro 12 años",
+              "descripcion": "",
+              "precio": 12500
+            }
+          ]
+        },
+        {
+          "titulo": "Coctelería",
+          "items": [
+            {
+              "nombre": "Aperol Spritz",
+              "descripcion": "",
+              "precio": 7900
+            },
+            {
+              "nombre": "Ramazzotti",
+              "descripcion": "",
+              "precio": 7900
+            },
+            {
+              "nombre": "Mojito tradicional",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Pisco sour simple",
+              "descripcion": "",
+              "precio": 3990
+            },
+            {
+              "nombre": "Pisco sour doble",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Vaina",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Piña colada",
+              "descripcion": "",
+              "precio": 8600
+            },
+            {
+              "nombre": "Primavera licor nacional",
+              "descripcion": "",
+              "precio": 7000
+            },
+            {
+              "nombre": "Primavera licor importado",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Caipiriña",
+              "descripcion": "",
+              "precio": 5900
+            },
+            {
+              "nombre": "Kaipiroska",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Kaipirisima",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Tequila Margarita",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Tequila Sunrise",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Tequila en México",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "Martini",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Old Fashioned",
+              "descripcion": "",
+              "precio": 11100
+            },
+            {
+              "nombre": "Campari Americano",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Tom Collins",
+              "descripcion": "",
+              "precio": 8700
+            },
+            {
+              "nombre": "John Collins",
+              "descripcion": "",
+              "precio": 8700
+            },
+            {
+              "nombre": "Clavo Oxidado",
+              "descripcion": "",
+              "precio": 9700
+            }
+          ]
+        },
+        {
+          "titulo": "Aperitivos",
+          "items": [
+            {
+              "nombre": "Pisco sour nacional",
+              "descripcion": "",
+              "precio": 3990
+            },
+            {
+              "nombre": "Pisco sour nacional doble",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Vaina nacional",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Whisky sour",
+              "descripcion": "",
+              "precio": 7200
+            },
+            {
+              "nombre": "Vodka sour",
+              "descripcion": "",
+              "precio": 6300
+            },
+            {
+              "nombre": "Daiquiri",
+              "descripcion": "",
+              "precio": 8600
+            },
+            {
+              "nombre": "Manhattan",
+              "descripcion": "",
+              "precio": 10100
+            }
+          ]
+        },
+        {
+          "titulo": "Tragos largos",
+          "items": [
+            {
+              "nombre": "Pisco 46º Alto del Carmen",
+              "descripcion": "",
+              "precio": 7100
+            },
+            {
+              "nombre": "Pisco 35º Alto del Carmen",
+              "descripcion": "",
+              "precio": 6200
+            },
+            {
+              "nombre": "Pisco 35º Capel",
+              "descripcion": "",
+              "precio": 5400
+            },
+            {
+              "nombre": "Gin Beefeater",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Vodka Stolichnaya",
+              "descripcion": "",
+              "precio": 7500
+            },
+            {
+              "nombre": "Vodka Borsoi",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Ron Bacardí",
+              "descripcion": "",
+              "precio": 8100
+            },
+            {
+              "nombre": "Ron Sierra Morena",
+              "descripcion": "",
+              "precio": 6500
+            },
+            {
+              "nombre": "Ron Habana Club",
+              "descripcion": "",
+              "precio": 7500
+            }
+          ]
+        },
+        {
+          "titulo": "Bajativos",
+          "items": [
+            {
+              "nombre": "Menta frappé",
+              "descripcion": "",
+              "precio": 4600
+            },
+            {
+              "nombre": "Mentira frívola",
+              "descripcion": "",
+              "precio": 5200
+            },
+            {
+              "nombre": "Manzanilla frappé",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Pichuncho",
+              "descripcion": "",
+              "precio": 5500
+            },
+            {
+              "nombre": "Araucano",
+              "descripcion": "",
+              "precio": 4500
+            },
+            {
+              "nombre": "Bitter",
+              "descripcion": "",
+              "precio": 4700
+            },
+            {
+              "nombre": "Anís",
+              "descripcion": "",
+              "precio": 5200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contacto": {
+    "ciudad": "Viña del Mar",
+    "direccion": "[Dirección por confirmar]",
+    "horario_lj": "09:00 – 22:00 hrs",
+    "horario_vs": "09:00 – 23:30 hrs",
+    "horario_dom": "10:00 – 21:00 hrs",
+    "telefono": "+56 32 XXX XXXX",
+    "whatsapp": "56900000000",
+    "email": "fuente.bavara.vina@gmail.com",
+    "instagram": "https://instagram.com/fuentebavara"
+  }
+}
