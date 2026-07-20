@@ -25,9 +25,111 @@ collections:
             collapsed: false
             fields:
               - { label: "Barra superior (Fundada en...)", name: "badge", widget: "string" }
+              - { label: "Titulo linea 1", name: "titulo1", widget: "string" }
+              - { label: "Titulo linea 2", name: "titulo2", widget: "string" }
               - { label: "Texto bajo el titulo", name: "sub", widget: "text" }
+              - { label: "Boton 1", name: "boton1", widget: "string" }
+              - { label: "Boton 2", name: "boton2", widget: "string" }
               - { label: "Nota derecha - titulo", name: "nota_titulo", widget: "string" }
               - { label: "Nota derecha - texto", name: "nota_texto", widget: "text" }
+
+          - label: "Medios principales"
+            name: "media"
+            widget: "object"
+            collapsed: true
+            hint: "Foto de portada, logo y videos del personaje."
+            fields:
+              - { label: "Foto de portada", name: "hero_imagen", widget: "image", required: false }
+              - { label: "Logo", name: "logo", widget: "image", required: false }
+              - { label: "Video del patron (seccion)", name: "video_patron", widget: "file", required: false }
+              - { label: "Video del brindis (pizarra)", name: "video_mono", widget: "file", required: false }
+
+          - label: "Cinta deslizante (marquee)"
+            name: "marquee"
+            widget: "list"
+            label_singular: "Frase"
+            field: { label: "Frase", name: "frase", widget: "string" }
+
+          - label: "Los Imperdibles de la Casa"
+            name: "imperdibles"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - { label: "Texto bajo el titulo", name: "sub", widget: "text" }
+              - label: "Tarjetas"
+                name: "tarjetas"
+                widget: "list"
+                label_singular: "Tarjeta"
+                summary: "{{fields.titulo}} — {{fields.precio}}"
+                fields:
+                  - { label: "Titulo", name: "titulo", widget: "string" }
+                  - { label: "Descripcion", name: "descripcion", widget: "text" }
+                  - { label: "Precio (ej $10.900)", name: "precio", widget: "string" }
+                  - { label: "Foto (PNG recortado)", name: "imagen", widget: "image" }
+
+          - label: "El Patron de la Casa"
+            name: "patron"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Texto del boton", name: "boton", widget: "string" }
+
+          - label: "Seccion Instagram"
+            name: "instagram"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - { label: "Texto bajo el titulo", name: "sub", widget: "string" }
+              - { label: "Texto del boton", name: "boton", widget: "string" }
+              - label: "Publicaciones (3 fotos)"
+                name: "posts"
+                widget: "list"
+                label_singular: "Publicacion"
+                fields:
+                  - { label: "Imagen", name: "imagen", widget: "image" }
+
+          - label: "Galeria de la Casa"
+            name: "galeria"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - label: "Fotos"
+                name: "fotos"
+                widget: "list"
+                label_singular: "Foto"
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: "Imagen", name: "imagen", widget: "image" }
+                  - { label: "Texto (leyenda)", name: "caption", widget: "string", required: false }
+
+          - label: "La Taberna en Cifras"
+            name: "cifras"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - label: "Cifras"
+                name: "lista"
+                widget: "list"
+                label_singular: "Cifra"
+                summary: "{{fields.numero}} — {{fields.texto}}"
+                fields:
+                  - { label: "Numero (ej +55)", name: "numero", widget: "string" }
+                  - { label: "Descripcion", name: "texto", widget: "string" }
+
+          - label: "Tira de fotos (banda deslizante)"
+            name: "fotostrip"
+            widget: "list"
+            label_singular: "Foto"
+            field: { label: "Imagen", name: "imagen", widget: "image" }
+
+          - { label: "Titulo seccion Ubicacion", name: "ubicacion_titulo", widget: "string" }
+          - { label: "Texto del pie de pagina", name: "footer_descripcion", widget: "text" }
 
           - label: "La Pizarra de Hoy"
             name: "pizarra"

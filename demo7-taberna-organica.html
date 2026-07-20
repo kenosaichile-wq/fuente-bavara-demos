@@ -421,11 +421,11 @@ footer{padding:80px 20px 30px;color:#D9C391;
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-contenido">
     <span class="hero-desde">Fundada en <b>1970</b> en Viña del Mar</span>
-    <h1><span class="oro">Tradición</span> <span class="l2 oro">Bávara</span></h1>
+    <h1><span class="oro tit1">Tradición</span> <span class="l2 oro tit2">Bávara</span></h1>
     <p class="hero-sub">Bajo bóvedas pintadas a mano y pilares centenarios: completos con chucrut, chorrillanas al centro y schop artesanal helado.</p>
     <div class="hero-cta">
-      <a class="btn" href="#carta">Ver la Carta</a>
-      <a class="btn oscuro" href="#pizarra">La Pizarra de Hoy</a>
+      <a class="btn btn1" href="#carta">Ver la Carta</a>
+      <a class="btn oscuro btn2" href="#pizarra">La Pizarra de Hoy</a>
     </div>
   </div>
   <div class="hero-nota"><b>El patrón te espera</b><br>con un schop bien helado en el salón pintado de Viña del Mar</div>
@@ -437,7 +437,7 @@ footer{padding:80px 20px 30px;color:#D9C391;
 </div></div>
 
 <!-- DESTACADOS -->
-<section class="destacados-seccion">
+<section class="destacados-seccion" id="imperdibles">
   <div class="contenedor">
     <div class="reveal">
       <h2 class="titulo gotica" style="color:var(--cafe)">Los Imperdibles de la Casa</h2>
@@ -501,7 +501,7 @@ footer{padding:80px 20px 30px;color:#D9C391;
 </section>
 
 <!-- EL PATRÓN DE LA CASA: video del logo animado (cierre de los reels) -->
-<section class="destacados-seccion">
+<section class="destacados-seccion" id="patron">
   <div class="patron-grid">
     <div class="marco reveal">
       <video autoplay muted loop playsinline preload="metadata" poster="assets/logo_taberna_poster.jpg">
@@ -587,7 +587,7 @@ footer{padding:80px 20px 30px;color:#D9C391;
 </section>
 
 <!-- NUMEROS -->
-<section class="numeros">
+<section class="numeros" id="numeros">
   <div class="reveal">
     <h2 class="titulo gotica">La Taberna en Cifras</h2>
     <div class="filete"><span>❦</span></div>
@@ -859,10 +859,104 @@ function aplicarContenido(d){
   if(d.hero){
     const badge=document.querySelector('.hero-desde');
     if(badge&&d.hero.badge) badge.innerHTML=d.hero.badge.replace(/(\d{4})/,'<b>$1</b>');
+    const t1=document.querySelector('.hero h1 .tit1'); if(t1&&d.hero.titulo1) t1.textContent=d.hero.titulo1;
+    const t2=document.querySelector('.hero h1 .tit2'); if(t2&&d.hero.titulo2) t2.textContent=d.hero.titulo2;
     const sub=document.querySelector('.hero-sub');
     if(sub&&d.hero.sub) sub.textContent=d.hero.sub;
+    const b1=document.querySelector('.hero-cta .btn1'); if(b1&&d.hero.boton1) b1.textContent=d.hero.boton1;
+    const b2=document.querySelector('.hero-cta .btn2'); if(b2&&d.hero.boton2) b2.textContent=d.hero.boton2;
     const nota=document.querySelector('.hero-nota');
     if(nota&&d.hero.nota_titulo) nota.innerHTML='<b>'+d.hero.nota_titulo+'</b><br>'+(d.hero.nota_texto||'');
+  }
+  if(d.media){
+    const m=d.media;
+    if(m.hero_imagen) document.getElementById('heroBg').style.backgroundImage=`url('${m.hero_imagen}')`;
+    if(m.logo) document.querySelectorAll('.logo-img,.hero-logo,.footer-logo-img,.ig-head img').forEach(img=>img.src=m.logo);
+    if(m.video_patron){
+      const v=document.querySelector('#patron video');
+      if(v){ v.querySelector('source').src=m.video_patron; v.load(); v.play().catch(()=>{}); }
+    }
+    if(m.video_mono){
+      const v=document.querySelector('.mono-brindis video');
+      if(v){ v.querySelector('source').src=m.video_mono; v.load(); v.play().catch(()=>{}); }
+    }
+  }
+  if(Array.isArray(d.marquee)&&d.marquee.length){
+    const inner=document.querySelector('.marquee-inner');
+    if(inner) inner.innerHTML=d.marquee.map(f=>`<span>${f}</span>`).join('')+d.marquee.map(f=>`<span>${f}</span>`).join('');
+  }
+  if(d.imperdibles){
+    const sec=document.getElementById('imperdibles');
+    if(sec){
+      const tit=sec.querySelector('.titulo'); if(tit&&d.imperdibles.titulo) tit.textContent=d.imperdibles.titulo;
+      const sub=sec.querySelector('.sub'); if(sub&&d.imperdibles.sub) sub.textContent=d.imperdibles.sub;
+      if(Array.isArray(d.imperdibles.tarjetas)&&d.imperdibles.tarjetas.length){
+        const cards=sec.querySelector('.cards');
+        cards.innerHTML=d.imperdibles.tarjetas.map(t=>`
+          <div class="card reveal visible">
+            <img src="${t.imagen||''}" alt="${t.titulo||''}">
+            <h3 class="gotica">${t.titulo||''}</h3>
+            <p>${t.descripcion||''}</p>
+            <span class="medalla">${t.precio||''}</span>
+          </div>`).join('');
+      }
+    }
+  }
+  if(d.patron){
+    const sec=document.getElementById('patron');
+    if(sec){
+      const tit=sec.querySelector('h2'); if(tit&&d.patron.titulo) tit.textContent=d.patron.titulo;
+      const txt=sec.querySelector('.parrafo'); if(txt&&d.patron.texto) txt.textContent=d.patron.texto;
+      const btn=sec.querySelector('.btn'); if(btn&&d.patron.boton) btn.textContent=d.patron.boton;
+    }
+  }
+  if(d.instagram){
+    const sec=document.getElementById('instagram');
+    if(sec){
+      const tit=sec.querySelector('.titulo'); if(tit&&d.instagram.titulo) tit.textContent=d.instagram.titulo;
+      const sub=sec.querySelector('.sub'); if(sub&&d.instagram.sub) sub.textContent=d.instagram.sub;
+      const btn=sec.querySelector('.ig-btn .btn'); if(btn&&d.instagram.boton) btn.textContent=d.instagram.boton;
+      if(Array.isArray(d.instagram.posts)&&d.instagram.posts.length){
+        const imgs=sec.querySelectorAll('.ig-card img.post');
+        d.instagram.posts.forEach((p,i)=>{ if(imgs[i]&&p.imagen) imgs[i].src=p.imagen; });
+      }
+    }
+  }
+  if(d.galeria){
+    const sec=document.getElementById('galeria');
+    if(sec){
+      const tit=sec.querySelector('.titulo'); if(tit&&d.galeria.titulo) tit.textContent=d.galeria.titulo;
+      if(Array.isArray(d.galeria.fotos)&&d.galeria.fotos.length){
+        const grid=sec.querySelector('.gal-grid');
+        grid.innerHTML=d.galeria.fotos.map(f=>`
+          <figure class="gal-marco reveal visible"><img src="${f.imagen||''}" alt="${f.caption||''}">${f.caption?`<figcaption>${f.caption}</figcaption>`:''}</figure>`).join('');
+      }
+    }
+  }
+  if(d.cifras){
+    const sec=document.getElementById('numeros');
+    if(sec){
+      const tit=sec.querySelector('.titulo'); if(tit&&d.cifras.titulo) tit.textContent=d.cifras.titulo;
+      if(Array.isArray(d.cifras.lista)&&d.cifras.lista.length){
+        const grid=sec.querySelector('.num-grid');
+        grid.innerHTML=d.cifras.lista.map(c=>`<div class="medallon reveal visible"><b class="oro">${c.numero||''}</b><p>${c.texto||''}</p></div>`).join('');
+      }
+    }
+  }
+  if(Array.isArray(d.fotostrip)&&d.fotostrip.length){
+    const track=document.querySelector('.fotostrip-track');
+    if(track){
+      const html=d.fotostrip.map(f=>`<img src="${(f.imagen||f)}" alt="">`).join('');
+      track.innerHTML=html+html;
+    }
+  }
+  if(d.ubicacion_titulo){
+    const tit=document.querySelector('#ubicacion .titulo');
+    if(tit) tit.textContent=d.ubicacion_titulo;
+  }
+  if(d.footer_descripcion){
+    const p=document.querySelector('.footer-desc');
+    if(p) p.textContent=d.footer_descripcion;
   }
   if(d.pizarra){
     const tit=document.querySelector('.pizarra .titulo');
