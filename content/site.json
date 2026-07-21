@@ -1,35 +1,4 @@
 {
-  "hero": {
-    "badge": "Fundada en 1970 en Viña del Mar",
-    "sub": "Bajo bóvedas pintadas a mano y pilares centenarios: completos con chucrut, chorrillanas al centro y schop artesanal helado.",
-    "nota_titulo": "El patrón te espera",
-    "nota_texto": "con un schop bien helado en el salón pintado de Viña del Mar",
-    "titulo1": "Tradición",
-    "titulo2": "Bávara",
-    "boton1": "Ver la Carta",
-    "boton2": "La Pizarra de Hoy"
-  },
-  "pizarra": {
-    "titulo": "La Pizarra de Hoy",
-    "promos": [
-      {
-        "titulo": "Super OFERTA",
-        "subtitulo": "~ Hamburguesa casera ~",
-        "ingredientes": "Hamburguesa casera, tomate, palta y mayonesa,\nmás té ó café ó vaso de bebida",
-        "precio": "$ 5.990",
-        "nota": "✎ Hecho a mano · Producto chileno",
-        "imagen": "assets/cut_plato120.png"
-      },
-      {
-        "titulo": "Super LOMITO",
-        "subtitulo": "~ Lomito de cerdo ~",
-        "ingredientes": "Lomito de cerdo, tomate, palta, lechuga y mayonesa casera,\nmás té ó café ó vaso de bebida",
-        "precio": "$ 8.990",
-        "nota": "✎ Hecho a mano · Producto chileno",
-        "imagen": "assets/cut_plato123.png"
-      }
-    ]
-  },
   "carta": [
     {
       "categoria": "Desayunos",
@@ -1325,22 +1294,26 @@
       ]
     }
   ],
-  "contacto": {
-    "ciudad": "Viña del Mar",
-    "direccion": "[Dirección por confirmar]",
-    "horario_lj": "09:00 – 22:00 hrs",
-    "horario_vs": "09:00 – 23:30 hrs",
-    "horario_dom": "10:00 – 21:00 hrs",
-    "telefono": "+56 32 XXX XXXX",
-    "whatsapp": "56900000000",
-    "email": "fuente.bavara.vina@gmail.com",
-    "instagram": "https://instagram.com/fuentebavara"
-  },
-  "media": {
-    "hero_imagen": "assets/hero_patron_hd.jpg",
-    "logo": "assets/logo.png",
-    "video_patron": "assets/logo_taberna.mp4",
-    "video_mono": "assets/mono_brindis.mp4"
+  "pizarra": {
+    "titulo": "La Pizarra de Hoy",
+    "promos": [
+      {
+        "titulo": "Super OFERTA",
+        "subtitulo": "~ Hamburguesa casera ~",
+        "ingredientes": "Hamburguesa casera, tomate, palta y mayonesa,\nmás té ó café ó vaso de bebida",
+        "precio": "$ 5.990",
+        "nota": "✎ Hecho a mano · Producto chileno",
+        "imagen": "assets/cut_plato120.png"
+      },
+      {
+        "titulo": "Super LOMITO",
+        "subtitulo": "~ Lomito de cerdo ~",
+        "ingredientes": "Lomito de cerdo, tomate, palta, lechuga y mayonesa casera,\nmás té ó café ó vaso de bebida",
+        "precio": "$ 8.990",
+        "nota": "✎ Hecho a mano · Producto chileno",
+        "imagen": "assets/cut_plato123.png"
+      }
+    ]
   },
   "marquee": [
     "❧ Completos con chucrut",
@@ -1348,6 +1321,77 @@
     "❧ Chorrillanas al centro",
     "❧ Vienesas Llanquihue",
     "❧ Desde 1970"
+  ],
+  "cifras": {
+    "titulo": "La Taberna en Cifras",
+    "lista": [
+      {
+        "numero": "1970",
+        "texto": "Año de fundación en Viña del Mar"
+      },
+      {
+        "numero": "+55",
+        "texto": "Años de tradición bávara ininterrumpida"
+      },
+      {
+        "numero": "+200",
+        "texto": "Preparaciones entre sándwiches, platos y coctelería"
+      },
+      {
+        "numero": "13",
+        "texto": "Variedades de cerveza y schop de barril"
+      }
+    ]
+  },
+  "media": {
+    "hero_imagen": "assets/hero_patron_hd.jpg",
+    "logo": "assets/logo.png",
+    "video_patron": "assets/logo_taberna.mp4",
+    "video_mono": "assets/mono_brindis.mp4"
+  },
+  "footer_descripcion": "Taberna bávara fundada en 1970. Sándwiches, chorrillanas, platos caseros y la mejor cerveza artesanal del sur de Chile.",
+  "patron": {
+    "titulo": "El patrón de la casa",
+    "texto": "Nuestro bávaro de bigote blanco lleva más de medio siglo recibiendo a los comensales con un schop en cada mano. Hoy es el sello de la casa: lo verás en el frontis, en las pizarras y cerrando cada video de nuestras redes.",
+    "boton": "Ver en Instagram"
+  },
+  "contacto": {
+    "horario_dom": "10:00 – 21:00 hrs",
+    "direccion": "[Dirección por confirmar]",
+    "whatsapp": "56988356532",
+    "instagram": "https://instagram.com/fuentebavara",
+    "telefono": "+569 8835 6532",
+    "ciudad": "Viña del Mar",
+    "horario_vs": "09:00 – 23:30 hrs",
+    "horario_lj": "09:00 – 22:00 hrs",
+    "email": "fuente.bavara.vina@gmail.com"
+  },
+  "instagram": {
+    "titulo": "Síguenos en Instagram",
+    "sub": "@fuentebavara — nuestras últimas publicaciones",
+    "boton": "Seguir a @fuentebavara",
+    "posts": [
+      {
+        "imagen": "assets/plato17.jpg"
+      },
+      {
+        "imagen": "assets/plato131.jpg"
+      },
+      {
+        "imagen": "assets/plato1.jpg"
+      }
+    ]
+  },
+  "fotostrip": [
+    "assets/interior_0225.jpg",
+    "assets/interior_0234.jpg",
+    "assets/interior_0253.jpg",
+    "assets/interior_0328.jpg",
+    "assets/interior_8379.jpg",
+    "assets/interior_8386.jpg",
+    "assets/interior_8432.jpg",
+    "assets/plato14.jpg",
+    "assets/plato18.jpg"
   ],
   "imperdibles": {
     "titulo": "Los Imperdibles de la Casa",
@@ -1376,27 +1420,6 @@
         "descripcion": "En paila de greda, dorado al horno. El clásico chileno con sello bávaro.",
         "precio": "$9.600",
         "imagen": "assets/cut_plato17.png"
-      }
-    ]
-  },
-  "patron": {
-    "titulo": "El patrón de la casa",
-    "texto": "Nuestro bávaro de bigote blanco lleva más de medio siglo recibiendo a los comensales con un schop en cada mano. Hoy es el sello de la casa: lo verás en el frontis, en las pizarras y cerrando cada video de nuestras redes.",
-    "boton": "Ver en Instagram"
-  },
-  "instagram": {
-    "titulo": "Síguenos en Instagram",
-    "sub": "@fuentebavara — nuestras últimas publicaciones",
-    "boton": "Seguir a @fuentebavara",
-    "posts": [
-      {
-        "imagen": "assets/plato17.jpg"
-      },
-      {
-        "imagen": "assets/plato131.jpg"
-      },
-      {
-        "imagen": "assets/plato1.jpg"
       }
     ]
   },
@@ -1437,38 +1460,15 @@
       }
     ]
   },
-  "cifras": {
-    "titulo": "La Taberna en Cifras",
-    "lista": [
-      {
-        "numero": "1970",
-        "texto": "Año de fundación en Viña del Mar"
-      },
-      {
-        "numero": "+55",
-        "texto": "Años de tradición bávara ininterrumpida"
-      },
-      {
-        "numero": "+200",
-        "texto": "Preparaciones entre sándwiches, platos y coctelería"
-      },
-      {
-        "numero": "13",
-        "texto": "Variedades de cerveza y schop de barril"
-      }
-    ]
-  },
-  "fotostrip": [
-    "assets/interior_0225.jpg",
-    "assets/interior_0234.jpg",
-    "assets/interior_0253.jpg",
-    "assets/interior_0328.jpg",
-    "assets/interior_8379.jpg",
-    "assets/interior_8386.jpg",
-    "assets/interior_8432.jpg",
-    "assets/plato14.jpg",
-    "assets/plato18.jpg"
-  ],
   "ubicacion_titulo": "Te Esperamos",
-  "footer_descripcion": "Taberna bávara fundada en 1970. Sándwiches, chorrillanas, platos caseros y la mejor cerveza artesanal del sur de Chile."
+  "hero": {
+    "badge": "Fundada en 1970 en Viña del Mar",
+    "sub": "Bajo bóvedas pintadas a mano y pilares centenarios: completos con chucrut, chorrillanas al centro y schop artesanal helado.",
+    "nota_titulo": "El patrón te espera",
+    "nota_texto": "con un schop bien helado en el salón pintado de Viña del Mar",
+    "titulo1": "Tradición",
+    "titulo2": "Bávara",
+    "boton1": "Ver la Carta",
+    "boton2": "La Pizarra de Hoy"
+  }
 }
