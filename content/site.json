@@ -1398,10 +1398,10 @@
     "sub": "Cincuenta años de recetas: las preparaciones que llenan las mesas todos los días.",
     "tarjetas": [
       {
-        "titulo": "Sassi Americano",
-        "descripcion": "Carne de res, huevo, tocino, tomate, pepinillo y mayo en pan ciabatta.",
-        "precio": "$10.900",
-        "imagen": "assets/cut_plato123.png"
+        "titulo": "Cazuela de Vacuno",
+        "descripcion": "Cazuela de Vacuno: Caldo robusto de vacuno en cocción lenta, equilibrado con la frescura de verduras seleccionadas: zapallo, zanahorias, papas, choclo, arroz y porotos verdes. Acompañado de ensalada mixta de la estación, pan crujiente horneado y pebre fresco del día.",
+        "precio": "$9.300",
+        "imagen": "assets/chatgpt-image-23-jul-2026-01_13_29.png"
       },
       {
         "titulo": "Hamburguesa Queso",
@@ -1464,7 +1464,7 @@
   "hero": {
     "badge": "Fundada en 1974 en Viña del Mar",
     "sub": "Tradición, buen comer y el auténtico toque alemán frente a la Plaza de Viña.\n\nBajo nuestras tradicionales bóvedas pintadas, en Fuente BÁVARA mantenemos viva la historia de la Ciudad Jardín. Ven a disfrutar de nuestros almuerzos caseros y la clásica línea de sándwiches con el característico toque de chucrut tradicional y mostaza de Dijon.\n\nUn punto de encuentro con sabor a hogar en pleno centro de Viña.",
-    "nota_titulo": "El patrón te espera",
+    "nota_titulo": "Te esperamos...",
     "nota_texto": "¿Se te antojó algo rico? Puedes visitarlos directamente en Plaza Latorre 60, Local 74-D, justo frente a la Plaza José Francisco Vergara y el ex Hotel O'Higgins. ",
     "titulo1": "Tradición",
     "titulo2": "Bávara",
