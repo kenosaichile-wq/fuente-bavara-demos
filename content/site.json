@@ -1302,7 +1302,7 @@
         "subtitulo": "~ Hamburguesa Casera ~",
         "ingredientes": "Jugosa hamburguesa casera acompañada de tomate fresco, palta recién molida y nuestra infaltable mayonesa tradicional.\n",
         "precio": "$ 5.990",
-        "nota": "✨☕Incluye a elección: Té, café o vaso de bebida.🥤",
+        "nota": "✨Incluye a elección: Té, café o vaso de bebida.🥤",
         "imagen": "assets/chatgpt-image-23-jul-2026-02_02_54.png"
       },
       {
@@ -1310,7 +1310,7 @@
         "subtitulo": "~ Lomito de Cerdo ~",
         "ingredientes": "Combo Lomito Tradicional\nEl sabor clásico de la casa en un sándwich contundente: láminas de lomito de cerdo, tomate en su punto, abundante palta, lechuga y el toque cremoso de nuestra mayonesa casera.",
         "precio": "$ 8.990",
-        "nota": "✨☕Incluye a elección: Té, café o vaso de bebida.🥤",
+        "nota": "✨Incluye a elección: Té, café o vaso de bebida.🥤",
         "imagen": "assets/beeaa491-860d-47e9-b365-13b1db16435d.png"
       }
     ]
@@ -1349,7 +1349,7 @@
     "video_patron": "assets/logo_taberna.mp4",
     "video_mono": "assets/mono_brindis.mp4"
   },
-  "footer_descripcion": "Taberna bávara fundada en 1970. Sándwiches, chorrillanas, platos caseros y la mejor cerveza artesanal del sur de Chile.",
+  "footer_descripcion": "Fuente Bávara fundada en 1974. Sándwiches, chorrillanas, platos caseros y la mejor cerveza.",
   "patron": {
     "titulo": "Sandwiches & Almuerzos  ",
     "texto": "La tradicional sandwichería y restaurante Fuente Bávara de Viña del Mar fue fundada en el año 1974.Este emblemático local, reconocido por su propuesta de fusión chileno-alemana, completó más de 50 años de historia ofreciendo sus clásicos sándwiches, completos con salchichas de la zona de Llanquihue y su característica mayonesa casera.",
