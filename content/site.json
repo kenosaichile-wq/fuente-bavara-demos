@@ -1435,16 +1435,8 @@
         "caption": "Porotos Pancho Villa"
       },
       {
-        "imagen": "assets/fuentebavara_-lomoalopobre-13-b.jpg",
-        "caption": "Lomo Liso a lo Pobre"
-      },
-      {
         "imagen": "assets/fuentebavara_-pastel.jpg",
         "caption": "Pastel de Choclo"
-      },
-      {
-        "imagen": "assets/fuentebavara_post_promo-chorrillana123456.jpg",
-        "caption": "Chorrillanas"
       },
       {
         "imagen": "assets/fuentebavara_post_6990-bbbb.jpg",
@@ -1453,6 +1445,14 @@
       {
         "imagen": "assets/fuentebavara_-pailamarina.jpg",
         "caption": "Pailas Marinas"
+      },
+      {
+        "imagen": "assets/fuentebavara_post_promo-chorrillana123456.jpg",
+        "caption": "Chorrillanas"
+      },
+      {
+        "imagen": "assets/fuentebavara_-lomoalopobre-13-b.jpg",
+        "caption": "Lomo Liso a lo Pobre"
       },
       {
         "imagen": "assets/chatgpt-image-22-may-2026-13_02_29.png",
