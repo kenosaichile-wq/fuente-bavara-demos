@@ -177,17 +177,43 @@ collections:
                       - { label: "Descripcion", name: "descripcion", widget: "string", required: false }
                       - { label: "Precio (solo numero, ej 7500)", name: "precio", widget: "number", value_type: "int" }
 
-          - label: "Contacto y redes"
+          - label: "Contacto, horarios y redes"
             name: "contacto"
             widget: "object"
-            collapsed: true
+            collapsed: false
             fields:
               - { label: "Ciudad", name: "ciudad", widget: "string" }
               - { label: "Direccion", name: "direccion", widget: "string" }
-              - { label: "Horario Lun a Jue", name: "horario_lj", widget: "string" }
-              - { label: "Horario Vie y Sab", name: "horario_vs", widget: "string" }
-              - { label: "Horario Domingo", name: "horario_dom", widget: "string" }
-              - { label: "Telefono", name: "telefono", widget: "string" }
+              - { label: "Horario — Lunes a Viernes", name: "horario_lv", widget: "string", hint: "Ej: 08:00 – 21:30 hrs" }
+              - { label: "Horario — Sabado", name: "horario_sab", widget: "string", hint: "Ej: 09:00 – 21:30 hrs" }
+              - { label: "Horario — Domingo", name: "horario_dom", widget: "string", hint: "Ej: 10:00 – 21:30 hrs" }
+              - { label: "TELEFONO de contacto", name: "telefono", widget: "string", hint: "Ej: +569 8835 6532 — este es el telefono que se muestra en la web" }
               - { label: "WhatsApp (solo numeros, ej 56912345678)", name: "whatsapp", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
-              - { label: "Link Instagram", name: "instagram", widget: "string" }
+              - { label: "Link Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Link Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "Link TikTok", name: "tiktok", widget: "string", required: false }
+
+  - name: "blog"
+    label: "Blog / Artículos"
+    files:
+      - file: "content/blog.json"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - { label: "Titulo de la pagina Blog", name: "titulo", widget: "string" }
+          - { label: "Texto de introduccion", name: "intro", widget: "text", required: false }
+          - label: "Articulos"
+            name: "articulos"
+            widget: "list"
+            label_singular: "Articulo"
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Titulo", name: "titulo", widget: "string" }
+              - { label: "Slug (URL, ej: mejores-completos-vina)", name: "slug", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Imagen principal", name: "imagen", widget: "image", required: false }
+              - { label: "Resumen (se ve en la lista)", name: "resumen", widget: "text" }
+              - { label: "Contenido del articulo", name: "contenido", widget: "markdown" }
+              - { label: "Titulo SEO (opcional)", name: "seo_titulo", widget: "string", required: false }
+              - { label: "Descripcion SEO (opcional)", name: "seo_desc", widget: "text", required: false }

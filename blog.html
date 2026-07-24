@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Fuente Bávara</title>
+<meta name="description" content="Historias, recetas y novedades de Fuente Bávara, Viña del Mar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Grenze+Gotisch:wght@400;500;600;700&family=Almendra:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--crema:#F6F0E3;--pergamino:#F3EBD6;--dorado:#E9B824;--dorado-osc:#B8860B;--tinta:#3A2410;--cafe:#4A2708;--carbon:#211E1A}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Almendra',serif;color:var(--tinta);background-color:var(--crema);
+  background-image:radial-gradient(ellipse at 50% 0%,#FBF7EC,var(--crema) 60%);min-height:100vh}
+h1,h2,h3{font-family:'Grenze Gotisch',serif;font-weight:600}
+.gotica{font-family:'Pirata One',serif;font-weight:400}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.oro{background:linear-gradient(180deg,#F9E27A,#E9B824 38%,#B8860B 62%,#F2CE55 88%,#9C6E08);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 rgba(46,23,5,.9))}
+.btn{display:inline-block;font-family:'Grenze Gotisch',serif;font-weight:700;font-size:1.05rem;color:#3A2005;padding:12px 26px;border-radius:10px;cursor:pointer;
+  background:linear-gradient(105deg,transparent 34%,rgba(255,255,255,.5) 42%,transparent 55%),linear-gradient(180deg,#FDEFAE,#E9B824 42%,#C08F10 60%,#F2CE55);
+  border:1px solid #5E3F05;box-shadow:0 0 0 2px #8F6A06,0 4px 0 #59390B,inset 0 1px 1px rgba(255,255,255,.9);text-shadow:0 1px 0 rgba(255,240,180,.7)}
+.btn:hover{transform:translateY(-2px)}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:12px 5%;
+  background:linear-gradient(180deg,rgba(28,25,21,.98),rgba(22,20,17,.98));border-bottom:1px solid rgba(233,184,36,.35);position:sticky;top:0;z-index:100}
+nav::after{content:'';position:absolute;left:0;right:0;bottom:-4px;height:4px;background:linear-gradient(90deg,#1A1A1A 0 33.3%,#B3271E 33.3% 66.6%,#E9B824 66.6% 100%)}
+nav img{height:54px;filter:drop-shadow(0 3px 5px rgba(0,0,0,.6))}
+nav .links{display:flex;gap:6px;list-style:none}
+nav .links a{font-family:'Grenze Gotisch',serif;font-weight:600;color:#E8D5A8;font-size:1.1rem;padding:8px 15px;border-radius:8px}
+nav .links a:hover{color:var(--dorado);background:rgba(255,255,255,.06)}
+
+/* HEADER */
+.blog-head{text-align:center;padding:70px 24px 30px}
+.blog-head h1{font-size:clamp(2.6rem,6vw,4.4rem);color:var(--cafe)}
+.blog-head p{font-style:italic;color:#7a6547;font-size:1.2rem;margin-top:10px}
+.filete{display:flex;align-items:center;gap:14px;justify-content:center;margin:20px 0 0;color:var(--dorado-osc)}
+.filete::before,.filete::after{content:'';width:110px;height:2px;background:linear-gradient(90deg,transparent,var(--dorado-osc))}
+.filete::after{background:linear-gradient(90deg,var(--dorado-osc),transparent)}
+
+/* LISTA */
+.lista{max-width:1080px;margin:40px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px}
+.art-card{background:linear-gradient(160deg,#FDF8EA,#F0E6CC);border:1px solid #C9AE76;border-radius:14px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(58,36,16,.16),inset 0 0 0 4px #FDF8EA,inset 0 0 0 5px rgba(184,134,11,.4);transition:.2s;cursor:pointer}
+.art-card:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(58,36,16,.24),inset 0 0 0 4px #FDF8EA,inset 0 0 0 5px rgba(184,134,11,.4)}
+.art-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.art-card .body{padding:20px 22px 24px}
+.art-card .fecha{font-size:.9rem;color:var(--dorado-osc);font-style:italic}
+.art-card h3{font-size:1.5rem;color:var(--cafe);margin:6px 0 8px}
+.art-card p{font-size:1rem;color:#6d5232;line-height:1.5}
+.art-card .leer{margin-top:14px;font-family:'Grenze Gotisch',serif;font-weight:600;color:var(--cafe)}
+
+/* ARTICULO */
+.articulo{max-width:760px;margin:20px auto 80px;padding:0 24px}
+.articulo .volver{display:inline-block;margin:10px 0 20px;font-family:'Grenze Gotisch',serif;color:var(--cafe)}
+.articulo img.hero{width:100%;border-radius:14px;border:5px solid #FDF8EA;box-shadow:0 12px 26px rgba(58,36,16,.22);margin-bottom:22px}
+.articulo .fecha{color:var(--dorado-osc);font-style:italic}
+.articulo h1{font-size:clamp(2rem,5vw,3.2rem);color:var(--cafe);margin:6px 0 20px;line-height:1.05}
+.articulo .contenido{font-size:1.15rem;line-height:1.75;color:#4a3826}
+.articulo .contenido h2{font-family:'Grenze Gotisch',serif;color:var(--cafe);font-size:1.8rem;margin:28px 0 10px}
+.articulo .contenido h3{font-family:'Grenze Gotisch',serif;color:var(--cafe);font-size:1.4rem;margin:22px 0 8px}
+.articulo .contenido p{margin:14px 0}
+.articulo .contenido strong{color:var(--cafe)}
+.articulo .contenido ul{margin:14px 0 14px 24px}
+
+/* FOOTER */
+footer{padding:50px 24px 30px;text-align:center;color:#D9C391;background:linear-gradient(180deg,#17140F,#0B0A08 55%);border-top:4px solid var(--dorado-osc)}
+footer a{color:var(--dorado)}
+.vacio{text-align:center;color:#7a6547;font-style:italic;padding:60px 24px;font-size:1.2rem}
+
+@media(max-width:700px){ nav .links a{padding:8px 10px;font-size:1rem} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html"><img src="assets/logo.png" alt="Fuente Bávara"></a>
+  <ul class="links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="index.html#carta">La Carta</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#ubicacion">Ubicación</a></li>
+  </ul>
+</nav>
+
+<main id="app">
+  <div class="vacio">Cargando…</div>
+</main>
+
+<footer>
+  <p>© 2026 Fuente Bávara — Tradición bávara en Viña del Mar · <a href="index.html">Volver al sitio</a></p>
+</footer>
+
+<script>
+const VERCEL_BASE='https://fuente-bavara-demos.vercel.app/';
+function fixAsset(p){ return /^assets\//.test(p||'') ? VERCEL_BASE+p : (p||''); }
+
+// Mini conversor de Markdown -> HTML (headers, negritas, listas, párrafos)
+function md(t){
+  if(!t) return '';
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const lines=t.replace(/\r/g,'').split('\n'); let html='',inList=false;
+  for(let ln of lines){
+    if(/^###\s+/.test(ln)){ if(inList){html+='</ul>';inList=false} html+='<h3>'+esc(ln.replace(/^###\s+/,''))+'</h3>'; continue; }
+    if(/^##\s+/.test(ln)){ if(inList){html+='</ul>';inList=false} html+='<h2>'+esc(ln.replace(/^##\s+/,''))+'</h2>'; continue; }
+    if(/^[-*]\s+/.test(ln)){ if(!inList){html+='<ul>';inList=true} html+='<li>'+inline(esc(ln.replace(/^[-*]\s+/,'')))+'</li>'; continue; }
+    if(inList){html+='</ul>';inList=false}
+    if(ln.trim()==='') continue;
+    html+='<p>'+inline(esc(ln))+'</p>';
+  }
+  if(inList) html+='</ul>';
+  return html;
+  function inline(s){ return s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>'); }
+}
+function fmtFecha(f){ if(!f) return ''; try{ return new Date(f).toLocaleDateString('es-CL',{year:'numeric',month:'long',day:'numeric'}); }catch(e){ return f; } }
+
+let DATA={titulo:'Nuestro Blog',intro:'',articulos:[]};
+const app=document.getElementById('app');
+
+function render(){
+  const slug=(location.hash.match(/#\/(.+)/)||[])[1];
+  if(slug){
+    const a=DATA.articulos.find(x=>x.slug===slug);
+    if(a){ verArticulo(a); return; }
+  }
+  verLista();
+}
+function verLista(){
+  document.title='Blog — Fuente Bávara';
+  if(!DATA.articulos.length){
+    app.innerHTML='<div class="blog-head"><h1 class="gotica">'+(DATA.titulo||'Nuestro Blog')+'</h1><div class="filete">❦</div></div><div class="vacio">Aún no hay artículos publicados. ¡Pronto habrá novedades!</div>';
+    return;
+  }
+  const cards=DATA.articulos.map(a=>`
+    <a class="art-card" href="#/${a.slug}">
+      ${a.imagen?`<img src="${fixAsset(a.imagen)}" alt="${a.titulo||''}">`:''}
+      <div class="body">
+        <span class="fecha">${fmtFecha(a.fecha)}</span>
+        <h3>${a.titulo||''}</h3>
+        <p>${a.resumen||''}</p>
+        <div class="leer">Leer más →</div>
+      </div>
+    </a>`).join('');
+  app.innerHTML=`<div class="blog-head"><h1 class="gotica">${DATA.titulo||'Nuestro Blog'}</h1>${DATA.intro?`<p>${DATA.intro}</p>`:''}<div class="filete">❦</div></div><div class="lista">${cards}</div>`;
+  scrollTo(0,0);
+}
+function verArticulo(a){
+  document.title=(a.seo_titulo||a.titulo)+' — Fuente Bávara';
+  app.innerHTML=`<article class="articulo">
+    <a class="volver" href="#/">← Volver al blog</a>
+    ${a.imagen?`<img class="hero" src="${fixAsset(a.imagen)}" alt="${a.titulo||''}">`:''}
+    <span class="fecha">${fmtFecha(a.fecha)}</span>
+    <h1>${a.titulo||''}</h1>
+    <div class="contenido">${md(a.contenido)}</div>
+    <p style="margin-top:34px"><a class="btn" href="index.html#carta">Ver la Carta</a></p>
+  </article>`;
+  scrollTo(0,0);
+}
+addEventListener('hashchange',render);
+
+// Cargar blog.json: primero Vercel (lo que edita el panel), fallback local
+fetch(VERCEL_BASE+'content/blog.json',{cache:'no-store'})
+  .then(r=>r.ok?r.json():Promise.reject())
+  .catch(()=>fetch('content/blog.json',{cache:'no-store'}).then(r=>r.ok?r.json():null))
+  .then(d=>{ if(d)DATA=d; render(); })
+  .catch(()=>{ render(); });
+</script>
+</body>
+</html>

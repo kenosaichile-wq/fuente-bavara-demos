@@ -1,0 +1,16 @@
+{
+  "titulo": "Nuestro Blog",
+  "intro": "Historias, recetas y novedades de Fuente Bávara.",
+  "articulos": [
+    {
+      "titulo": "Bienvenidos a Fuente Bávara",
+      "slug": "bienvenidos",
+      "fecha": "2026-07-23",
+      "imagen": "assets/interior_0206_blur.jpg",
+      "resumen": "Más de medio siglo de tradición bávara en el corazón de Viña del Mar. Te contamos nuestra historia.",
+      "contenido": "## Tradición desde 1974\n\nEn Fuente Bávara llevamos décadas sirviendo lo mejor de la cocina bávara y chilena, frente a la Plaza de Viña del Mar. Bajo nuestras bóvedas pintadas a mano, mantenemos viva la historia de la Ciudad Jardín.\n\nVen a probar nuestros completos, chorrillanas, mechadas y el mejor schop artesanal de la zona.\n\n¡Te esperamos con un schop bien helado!",
+      "seo_titulo": "Fuente Bávara — Tradición bávara en Viña del Mar",
+      "seo_desc": "Restaurante de tradición bávara en Viña del Mar. Completos, chorrillanas, schop artesanal y más."
+    }
+  ]
+}

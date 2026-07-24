@@ -1362,9 +1362,11 @@
     "instagram": "https://instagram.com/fuentebavara",
     "telefono": "+569 8835 6532",
     "ciudad": "Viña del Mar",
-    "horario_vs": "09:00 – 21:30 hrs",
-    "horario_lj": "08:00 – 21:30 hrs",
-    "email": "fuente.bavara.vina@gmail.com"
+    "email": "fuente.bavara.vina@gmail.com",
+    "horario_lv": "08:00 – 21:30 hrs",
+    "horario_sab": "09:00 – 21:30 hrs",
+    "facebook": "https://facebook.com/fuentebavara",
+    "tiktok": "https://tiktok.com/@fuentebavara"
   },
   "instagram": {
     "titulo": "Síguenos en Instagram",
